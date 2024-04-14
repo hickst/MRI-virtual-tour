@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- this imports the aframe package that we use for web vr -->
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    <style>
+        /* these will help ensure that the popout positions correctly on the lhs of the screen */
+        iframe {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 50%;
+            height: 100%;
+            border: black solid 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // create function that loads an iframe of the popout page in this page
+        let createTextPopout = (filehtml) => {
+            // generates a sub page on the current web vr view, it isn't actually a vr page now. 
+            // TODO check what this looks like in a headset, it's probably not good?
+            let iframeElement = document.createElement("iframe");
+            // use the html that was passed in when we called this function
+            iframeElement.src = filehtml;
+            document.body.append(iframeElement);
+            // bind the close button
+            // recursive timeout till selection passes
+            // TODO check if this actually does anything right now
+            let closeInt = setInterval(() => {
+                let btn = iframeElement.contentDocument.querySelector("button");
+                if (btn) {
+                    // add image to close it
+                    // ignoring old png based x
+                    let xPopoutIcon = document.createElement("img");
+                    xPopoutIcon.src =
+                        "x.svg";
+                        // various positioning code to make sure that the iframe is on the far left
+                    iframeElement.contentDocument.body.append(xPopoutIcon);
+                    xPopoutIcon.style.position = "absolute";
+                    xPopoutIcon.style.top = "0px";
+                    xPopoutIcon.style.right = "0px";
+                    xPopoutIcon.addEventListener("click", () => {
+                        document.querySelector("iframe").remove();
+                    });
+
+                    btn.addEventListener("click", () => {
+                        document.querySelector("iframe").remove();
+                    });
+                    clearInterval(closeInt);
+                }
+            }, 1000);
+            // ensure that we have the option to close the popout also
+            iframeElement.contentDocument
+                .querySelector("button")
+                .addEventListener("click", () => {
+                    document.querySelector("iframe").remove();
+                });
+        };
+    </script>
+    <script>
+        // this is a Aframe component, it allows us to extend the basic entities so that they can do custom things like work with 3d models from blender for example
+        // this anchor-reader is the name of the component we will define like an html element attribute (shown later), and the rest of the definition allows us to set up the types of input the component can accept and how it should initialize
+        // we will actually be using this to reposition the aframe entities that we place inside of the entity, in our case this will mostly be little circles that either hold the info or the movement icon
+        // you will have the option to customize the kind of behavior that each on triggers through the mlisten component defined later
+        AFRAME.registerComponent("anchor-reader", {
+            schema: {
+                // accept our input as the name of the empty from the blender file that we used to more intuitively position the info and movement icons
+                anchorName: { type: "string" },
+            },
+            init: function () {
+                // this is the function that we will use to update the location of the child
+                var match_name = function () {
+                    var mesh = this.el.getObject3D("mesh") // might need to specify the name actually
+                    // console.log("this mesh is the one we loaded", mesh)
+                    // can search the children for a name matching anchorName
+                    // then get the circle within the entity and set the rotation and translation on that
+                    let infoCircle = this.el.children[0]
+                    for (let anchor of mesh.children) {
+                        if (anchor.name == this.data.anchorName) {
+                            // unfortunate change of how values are handled between blender's zup and threejs y up
+                            // because we switched systems we have to invert the x, and then change which is z vs y, and then make the rotation use y instead of z, the same kinds of inversions are probably used if needing to handle other kinds of rotation, but for eye level info buttons this should be enough
+                            infoCircle.object3D.position.copy(anchor.position)
+                            infoCircle.object3D.rotation.copy(anchor.rotation)
+
+                        }
+                    }
+
+                }
+                match_name = match_name.bind(this)
+                // here we iterate over the model if it's finished loading and then introduce
+                this.el.addEventListener("model-loaded", match_name)
+            },
+        });
+        //This component is similarly defined but accomplishes a different kind of action. It lets us click on icons and open popups. Another component will be defined that lets us move to a different scene also
+        AFRAME.registerComponent("mlisten", {
+            schema: {
+                htmlFile: { type: "string" },
+                movement: { type: "boolean",default:false }
+            },
+            init: function () {
+                // simplify reference to the entity in code
+                let el = this.el;
+                // the input provided by the component defined on the entity
+                let htmlFile = this.data.htmlFile;
+                let movement = this.data.movement
+                // callbacks setup to handle behavior from different mousing interactions
+                this.el.addEventListener("mouseenter", function (e) {
+                    // play with emissivity
+                    el.setAttribute("material", "color", "#5ef7ff");
+                    //el.setAttribute("material","emissiveIntensity","1")
+                });
+                this.el.addEventListener("mouseleave", function () {
+                    //el.setAttribute("material", "emissiveIntensity",'.2')
+                    el.setAttribute("material", "color", "white");
+                });
+                // this is if the html file was what was put in
+                //
+                this.el.addEventListener("click", function () {
+                    console.log("cilcked on info");
+                    // check if we are supposed to move when we trigger this click
+                    if (movement) {
+                        // move to a different scene
+                        let newUrl = `./scanner1.html`
+                        console.log(newUrl)
+                        window.location.href = newUrl
+                    } else {
+                        // load whatever popout is needed for this part
+                        createTextPopout(htmlFile);
+                    }
+                });
+            },
+        });
+    </script>
+    <!-- this holds the spinner when the scene is loading instead of just showing a blank page -->
+    <div id="loaderHolder">
+        <div class="loader"></div>
+    </div>
+    <style>
+        #loaderHolder {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            border: 16px solid #f3f3f3;
+            /* Light grey */
+            border-top: 16px solid #3498db;
+            /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+        /* makes sure the loading screen animates */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- this is the parent of the entire vr tour scene -->
+    <!-- since we want the mouse to trigger things we set up the cursor this way, then we can trigger things like mouse interactions on elements we customized to listen -->
+    <a-scene loading-screen="dotsColor: black; backgroundColor: white" cursor="rayOrigin: mouse">
+
+
+        <!-- this is where we load in the various things we will use for the scene
+        * 360 image gets placed on the sky entity
+        * the info and arrow icons get used on the circles placed around the scene
+        * the anchors glb is a file that we used to make sure the elements got placed in the right locations when Aframe starts -->
+        <a-assets>
+            <img id="360-scanner_back2-image" src="360_scanner_back2.JPG" />
+            <img id="info" src="info.png" />
+            <img id="arrow" src="arrow.png" />
+            <!-- theres a good chance that it will help you to label the anchors by the scene name since we will be setting up a file like this for all of the individual scenes -->
+            <a-asset-item id="anchors" src="anchor.glb"></a-asset-item>
+        </a-assets>
+
+
+
+        <!--        adding in a entity that holds the camera, this is preferable to adding a simple camera as it allows for more extension later -->
+        for whatever reason in blender the camera uses a different coordinate system, so the no rotation aplied means that the cam looks down the blender y axis
+        <a-entity id="maincam" rotation="0 -180 0" position="0 0 0">
+            <a-camera look-controls></a-camera>
+        </a-entity>
+
+
+        <!-- here's the fun parts, we are using an entity and putting a different entity inside it
+        this lets us add our custom anchor-reader to the thing that loads the anchors model
+        then our anchor reader is also going to use it's code to update the position and rotation of it's first child,
+        in this case that is the circle element -->
+        <a-entity anchor-reader="anchorName:Machine" gltf-model="#anchors">
+
+            <!-- here we define the circle with standard shadeless double sided material using our info icon loaded in the assets, we actually use the id of the asset element to refer to it simply here
+            we will also be using the mlisten component to pass information about what should happen when people interact with the entity using a mouse -->
+            <a-circle mlisten="htmlFile:popout.html" material="side:double;src:#info;shader:flat"></a-circle>
+        </a-entity>
+        <a-entity anchor-reader="anchorName:machinedoor" gltf-model="#anchors">
+            <a-circle mlisten="htmlFile:popout.html" material="side:double;src:#info;shader:flat"></a-circle>
+        </a-entity>
+        <a-entity anchor-reader="anchorName:enterscanner" gltf-model="#anchors">
+            <a-circle mlisten="htmlFile:scanner.html;movement:true" material="side:double;src:#arrow;shader:flat"></a-circle>
+        </a-entity>
+        <!-- this is the element that controls the popout dynamics  the mlisten is a component we defined to react to mouse over and click events-->
+
+        <a-sky src="#360-scanner_back2-image"></a-sky>
+    </a-scene>
+
+    <!-- add an exit button in the top left corner of the screen -->
+    <div id="exit">
+        <img style="
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          border: black solid;
+          border-radius: 10px;
+          background: white;
+        " onclick="window.close()"
+            src="https://cdn.glitch.global/13f55c7a-7b3d-4eb7-86fd-c30f1292770c/reshot-icon-x-XL3PMTW87F-17ba4.svg"
+            alt="" />
+    </div>
+</body>
+
+</html>
