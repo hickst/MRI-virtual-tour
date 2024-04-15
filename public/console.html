@@ -44,19 +44,18 @@
       <a-camera look-controls></a-camera>
     </a-entity>
 
-    <!-- here's the fun parts, we are using an entity and putting a different entity
-         inside it this lets us add our custom anchor-reader to the thing that loads
-         the anchors model then our anchor reader is also going to use it's code to
-         update the position and rotation of it's first child,
-         in this case that is the circle element
+    <!-- Here are the fun parts, we are using an entity and putting a different entity
+         inside it. This lets us add our custom anchor-reader to the thing that loads
+         the anchors model. Then our anchor reader is also going to use its code to
+         update the position and rotation of its first child which, in this case,
+         is the circle element.
       -->
     <a-entity anchor-reader="anchorName:Machine" gltf-model="#anchors">
-
-      <!-- here we define the circle with standard shadeless double sided material
-           using our info icon loaded in the assets, we actually use the id of the
-           asset element to refer to it simply here we will also be using the
-           mlisten component to pass information about what should happen when people
-           interact with the entity using a mouse
+      <!-- Here we define the circle with standard shadeless, double-sided material
+           using our info icon loaded in the assets. We actually use the id of the
+           asset element to refer to it simply. We will also be using the
+           mlisten component to pass information about what should happen the user
+           interacts with the entity using a mouse.
         -->
       <a-circle mlisten="htmlFile:/public/popout.html"
                 material="side:double;src:#info;shader:flat">

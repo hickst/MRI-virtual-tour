@@ -5,38 +5,17 @@ let createTextPopout = (filehtml) => {
   // use the html that was passed in when we called this function
   iframeElement.src = filehtml;
   document.body.append(iframeElement);
-  // bind the close button
-  // recursive timeout till selection passes
-  // TODO check if this actually does anything right now
+  // try to add an event listener to the button every second until it works.
+  // TODO: rewrite this code: currently, it mandates one and only one button on each popup.
   let closeInt = setInterval(() => {
     let btn = iframeElement.contentDocument.querySelector("button");
     if (btn) {
-      // add image to close it
-      // ignoring old PNG based x
-      let xPopoutIcon = document.createElement("img");
-      xPopoutIcon.src =
-        "x.svg";
-      // various positioning code to make sure that the iframe is on the far left
-      iframeElement.contentDocument.body.append(xPopoutIcon);
-      xPopoutIcon.style.position = "absolute";
-      xPopoutIcon.style.top = "0px";
-      xPopoutIcon.style.right = "0px";
-      xPopoutIcon.addEventListener("click", () => {
-        document.querySelector("iframe").remove();
-      });
-
       btn.addEventListener("click", () => {
         document.querySelector("iframe").remove();
       });
       clearInterval(closeInt);
     }
   }, 1000);
-  // ensure that we have the option to close the popout also
-  iframeElement.contentDocument
-    .querySelector("button")
-    .addEventListener("click", () => {
-      document.querySelector("iframe").remove();
-    });
 };
 
 
