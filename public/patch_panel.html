@@ -35,13 +35,11 @@
     </a-assets>
 
 
-    <!-- adding in a entity that holds the camera, this is preferable to adding a
-         simple camera as it allows for more extension later for whatever reason
-         in blender the camera uses a different coordinate system, so the no rotation
-         aplied means that the cam looks down the blender y axis
+    <!-- Adding in a entity that holds the camera, this is preferable to adding a
+         simple camera as it allows for more extension later for whatever reason.
       -->
-    <a-entity id="maincam" rotation="0 -180 0" position="0 0 0">
-      <a-camera look-controls></a-camera>
+    <a-entity id="maincam" rotation="-10 205 -3" position="0 0 -50">
+      <a-camera></a-camera>
     </a-entity>
 
     <!-- Here are the fun parts, we are using an entity and putting a different entity
@@ -76,7 +74,7 @@
 
     <!-- this is the element that controls the popout dynamics. The mlisten is a component
          we defined to react to mouse over and click events-->
-    <a-sky src="#patch-panel" rotation="-10 -28 0"></a-sky>
+    <a-sky src="#patch-panel"></a-sky>
   </a-scene>
 
 </body>
