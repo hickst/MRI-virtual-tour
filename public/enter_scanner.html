@@ -38,46 +38,28 @@
     <!-- Adding in a entity that holds the camera, this is preferable to adding a
          simple camera as it allows for more extension later for whatever reason.
       -->
-    <a-entity id="maincam" rotation="0 0 0" position="0 0 0">
+    <a-entity id="maincam" rotation="-15 0 -5" position="0 0 0">
       <a-camera></a-camera>
     </a-entity>
 
 
-    <a-circle material="side:double;src:#info;shader:flat"
-              position="10 -10 10"
-              link="href: /public/console.html; image: /src/assets/arrow.png">
+    <a-circle id="to_console"
+              link="href: /public/console.html; image: /src/assets/arrow.png"
+              material="side:double;src:#arrow;shader:flat"
+              position="55 -75 -55" rotation="85 -60 -30" scale="4 4 .01">
     </a-circle>
 
+    <a-circle id="to_patchpanel"
+              link="href: /public/patch_panel.html; image: /src/assets/arrow.png"
+              material="side:double;src:#arrow;shader:flat"
+              position="-35 -75 -65" rotation="85 200 -30" scale="4 4 .01">
+    </a-circle>
 
-    <!-- Here are the fun parts, we are using an entity and putting a different entity
-         inside it. This lets us add our custom anchor-reader to the thing that loads
-         the anchors model. Then our anchor reader is also going to use its code to
-         update the position and rotation of its first child which, in this case,
-         is the circle element.
-      -->
-    <a-entity anchor-reader="anchorName:Machine" gltf-model="#anchors">
-      <!-- Here we define the circle with standard shadeless, double-sided material
-           using our info icon loaded in the assets. We actually use the id of the
-           asset element to refer to it simply. We will also be using the
-           mlisten component to pass information about what should happen the user
-           interacts with the entity using a mouse.
-        -->
-      <a-circle mlisten="htmlFile:/public/popout.html"
-                material="side:double;src:#info;shader:flat">
-      </a-circle>
-    </a-entity>
-
-    <a-entity anchor-reader="anchorName:machinedoor" gltf-model="#anchors">
-      <a-circle mlisten="htmlFile:/public/popout.html"
-                material="side:double;src:#info;shader:flat">
-      </a-circle>
-    </a-entity>
-
-    <a-entity anchor-reader="anchorName:enterscanner" gltf-model="#anchors">
-      <a-circle mlisten="htmlFile:/public/patch_panel.html;movement:true"
-                material="side:double;src:#arrow;shader:flat">
-      </a-circle>
-    </a-entity>
+    <a-circle id="info1"
+              mlisten="htmlFile:/public/popout.html"
+              material="side:double;src:#info;shader:flat"
+              position="80 4 -135" rotation="0 0 0" scale="4 4 .01">
+    </a-circle>
 
     <!-- this is the element that controls the popout dynamics. The mlisten is a component
          we defined to react to mouse over and click events-->
@@ -85,5 +67,4 @@
   </a-scene>
 
 </body>
-
 </html>
