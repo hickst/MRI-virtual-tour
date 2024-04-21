@@ -19,16 +19,16 @@ let createTextPopout = (filehtml) => {
 };
 
 
-// this is a Aframe component, it allows us to extend the basic entities so
-// that they can do custom things like work with 3d models from blender for
+// This is a Aframe component: it allows us to extend the basic entities so
+// that they can do custom things like work with 3d models from blender. For
 // example this anchor-reader is the name of the component we will define;
-// like an html element attribute (shown later), and the rest of the
+// like an html element attribute (shown later). The rest of the
 // definition allows us to set up the types of input the component can accept
-// and how it should initialize we will actually be using this to reposition
-// the aframe entities that we place inside of the entity, in our case this
+// and how it should initialize. We will actually be using this to reposition
+// the aframe entities that we place inside of the entity. In our case, this
 // will mostly be little circles that either hold the info or the movement
-// icon you will have the option to customize the kind of behavior that each
-// on triggers through the mlisten component defined later
+// icon. You will have the option to customize the kind of behavior that each
+// one triggers through the mlisten component defined later.
 AFRAME.registerComponent("anchor-reader", {
   schema: {
     // accept our input as the name of the empty from the blender file that
@@ -76,6 +76,9 @@ AFRAME.registerComponent("mlisten", {
   init: function () {
     // simplify reference to the entity in code
     let el = this.el;
+    let mat = el.getAttribute("material");
+    let elcolor = mat.color
+
     // the input provided by the component defined on the entity
     let htmlFile = this.data.htmlFile;
     let movement = this.data.movement
@@ -87,7 +90,7 @@ AFRAME.registerComponent("mlisten", {
     });
     this.el.addEventListener("mouseleave", function () {
       //el.setAttribute("material", "emissiveIntensity",'.2')
-      el.setAttribute("material", "color", "white");
+      el.setAttribute("material", "color", elcolor);
     });
     // this is if the html file was the content put in
     this.el.addEventListener("click", function () {
