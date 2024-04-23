@@ -1,2 +1,3 @@
-*node_modules
 EXTRAS/
+*node_modules
+test.html
