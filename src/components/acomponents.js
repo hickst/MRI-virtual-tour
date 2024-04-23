@@ -65,6 +65,22 @@ AFRAME.registerComponent("anchor-reader", {
 });
 
 
+// Listen for cursor clicks, modify colors of clicked 3D model object, and report
+// click event details to the browser console.
+AFRAME.registerComponent('cursor-listener', {
+  init: function () {
+    var lastIndex = -1;
+    var COLORS = ['red', 'green', 'blue'];
+    this.el.addEventListener('click', function (evt) {
+      lastIndex = (lastIndex + 1) % COLORS.length;
+      this.setAttribute('material', 'color', COLORS[lastIndex]);
+      console.log('Cursor event intersection: ', evt.detail.intersection);
+      console.log('MouseClick event detail: ', evt.detail.mouseEvent);
+    });
+  }
+});
+
+
 // This component is similarly defined but accomplishes a different kind of
 // action. It lets us click on icons and open popups. Another component will
 // be defined that lets us move to a different scene also.
