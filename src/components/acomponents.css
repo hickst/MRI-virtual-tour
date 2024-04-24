@@ -9,7 +9,7 @@ iframe {
 }
 
 
-<!-- this holds the spinner when the scene is loading instead of just showing a blank page -->
+/* This holds the spinner when the scene is loading instead of just showing a blank page. */
 #loaderHolder {
     height: 100%;
     width: 100%;

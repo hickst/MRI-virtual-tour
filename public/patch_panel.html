@@ -2,81 +2,72 @@
 <html>
 
 <head>
-  <!-- this imports the aframe package that we use for web vr -->
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-template-component@3.2.2/dist/aframe-template-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
   <script src="/src/components/acomponents.js"></script>
   <link rel="stylesheet" href="/src/components/acomponents.css"></script>
 </head>
 
 <body>
-  <!-- this holds the spinner when the scene is loading instead of just showing a blank page -->
-  <div id="loaderHolder">
-    <div class="loader"></div>
-  </div>
 
-  <!-- this is the parent of the entire vr tour scene -->
-  <!-- since we want the mouse to trigger things we set up the cursor this way,
-       then we can trigger things like mouse interactions on elements we customized to listen -->
+  <!-- This is the parent entity of the entire VR tour. -->
   <a-scene loading-screen="dotsColor: black; backgroundColor: white" cursor="rayOrigin: mouse">
 
-
-    <!-- this is where we load in the various things we will use for the scene
-         * the 360 image gets placed on the sky entity,
-         * the info and arrow icons get used on the circles, placed around the scene,
-         * the anchors glb is a file that we used to make sure the elements get placed in the
-         right locations when Aframe starts.
-      -->
+    <!-- Asset management -->
     <a-assets>
       <img id="patch-panel" src="/public/patch_panel.jpg" />
-      <img id="info" src="/src/assets/info.png" />
       <img id="arrow" src="/src/assets/arrow.png" />
-
-      <a-asset-item id="anchors" src="/public/anchor.glb"></a-asset-item>
     </a-assets>
 
-
-    <!-- Adding in a entity that holds the camera, this is preferable to adding a
-         simple camera as it allows for more extension later for whatever reason.
-      -->
-    <a-entity id="maincam" rotation="-10 205 -3" position="0 0 -50">
+    <!-- Entity which wraps the camera -->
+    <a-entity id="maincam" position="0 0 0">
       <a-camera></a-camera>
     </a-entity>
 
-    <!-- Here are the fun parts, we are using an entity and putting a different entity
-         inside it. This lets us add our custom anchor-reader to the thing that loads
-         the anchors model. Then our anchor reader is also going to use its code to
-         update the position and rotation of its first child which, in this case,
-         is the circle element.
-      -->
-    <a-entity anchor-reader="anchorName:Machine" gltf-model="#anchors">
-      <!-- Here we define the circle with standard shadeless, double-sided material
-           using our info icon loaded in the assets. We actually use the id of the
-           asset element to refer to it simply. We will also be using the
-           mlisten component to pass information about what should happen the user
-           interacts with the entity using a mouse.
-        -->
-      <a-circle mlisten="htmlFile:/public/popout.html"
-                material="side:double;src:#info;shader:flat">
-      </a-circle>
+
+    <!-- Entities generated using A-Frame templates. -->
+
+    <!-- Navigation circles: click to jump to another scene. -->
+    <a-entity id="to-back1_e"
+              template="src:/src/templates/navcircle.html; type:html"
+              data-id="to-back1"
+              data-link="/public/scanner_back1.html"
+              data-color="white"
+              position="-10 -10 -16" rotation="80 -90 0">
     </a-entity>
 
-    <a-entity anchor-reader="anchorName:machinedoor" gltf-model="#anchors">
-      <a-circle mlisten="htmlFile:/public/popout.html"
-                material="side:double;src:#info;shader:flat">
-      </a-circle>
+    <a-entity id="to-enter-scanner_e"
+              template="src:/src/templates/navcircle.html; type:html"
+              data-id="to-enter-scanner"
+              data-link="/public/enter_scanner.html"
+              data-color="white"
+              position="14 -10 -16" rotation="85 160 0">
     </a-entity>
 
-    <a-entity anchor-reader="anchorName:enterscanner" gltf-model="#anchors">
-      <a-circle mlisten="htmlFile:/public/scanner_back1.html;movement:true"
-                material="side:double;src:#arrow;shader:flat">
-      </a-circle>
+    <a-entity id="to-console_e"
+              template="src:/src/templates/navcircle.html; type:html"
+              data-id="to-console"
+              data-link="/public/console.html"
+              data-color="white"
+              position="17 -5.5 -17" rotation="90 80 -5">
     </a-entity>
 
-    <!-- this is the element that controls the popout dynamics. The mlisten is a component
-         we defined to react to mouse over and click events-->
-    <a-sky src="#patch-panel"></a-sky>
+
+    <!-- Information spheres: show info for real-world items in 360 image.-->
+    <a-entity id="sp-info1"
+              template="src:/src/templates/infosphere.html; type:html"
+              data-id="info1" data-color="blue"
+              position="-7 -1.5 -17" scale=".5 .5 .5">
+    </a-entity>
+
+
+    <!-- The sky sphere on which the 360 image is projected. The sky is rotated
+         slightly in each scene for best viewing. -->
+    <!-- <a-sky src="#patch-panel" radius="30" rotation="-10 205 -3"></a-sky> -->
+    <a-sky src="#patch-panel" radius="30" position="0 0 -4" rotation="-10 150 2"></a-sky>
+
   </a-scene>
 
 </body>
-
 </html>
