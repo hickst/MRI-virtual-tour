@@ -12,7 +12,9 @@
 <body>
 
   <!-- This is the parent entity of the entire VR tour. -->
-  <a-scene loading-screen="dotsColor: black; backgroundColor: white" cursor="rayOrigin: mouse">
+  <a-scene loading-screen="dotsColor: black; backgroundColor: white"
+           xr-mode-ui="XRMode:vr; enabled:false"
+           cursor="rayOrigin: mouse">
 
     <!-- Asset management -->
     <a-assets>
