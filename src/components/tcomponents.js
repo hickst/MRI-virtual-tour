@@ -17,12 +17,14 @@ AFRAME.registerComponent('click-listener', {
 
 AFRAME.registerComponent("infopoint", {
   schema: {
-    color: { type: "string", default: "blue" }
+    color: { type: "string", default: "blue" },
+    radius: { type: "number", default: ".5" }
   },
 
   init: function () {
     this.el.setAttribute("geometry", "primitive", "sphere");
-    this.el.setAttribute("material", "shader", "flat");
+    this.el.setAttribute("geometry", "radius", this.data.radius);
+    // this.el.setAttribute("material", "shader", "flat");
     this.el.setAttribute("material", "color", this.data.color);
   },
 
@@ -43,7 +45,8 @@ AFRAME.registerPrimitive("a-infopoint", {
     infopoint: {},
   },
   mappings: {
-    color: "infopoint.color"
+    color: "infopoint.color",
+    radius: "infopoint.radius"
   }
 });
 
