@@ -15,10 +15,12 @@ AFRAME.registerComponent('click-listener', {
 });
 
 
+// Custom Component to display information objects which user can click
+// to provide additional information about the marked real-world item.
 AFRAME.registerComponent("infopoint", {
   schema: {
     color: { type: "string", default: "blue" },
-    radius: { type: "number", default: ".5" }
+    radius: { type: "string", default: ".5" }
   },
 
   init: function () {
@@ -39,14 +41,53 @@ AFRAME.registerComponent("infopoint", {
   },
 });
 
-
-AFRAME.registerPrimitive("a-infopoint", {
+// register the infopoint component as a primitive
+AFRAME.registerPrimitive("t-infopoint", {
   defaultComponents: {
     infopoint: {},
   },
   mappings: {
     color: "infopoint.color",
     radius: "infopoint.radius"
+  }
+});
+
+
+
+// Custom Component to navigate to another scene in another HTML page.
+AFRAME.registerComponent("navpoint", {
+  schema: {
+    color: { type: "string", default: "white" },
+  },
+
+  init: function () {
+    this.el.setAttribute("geometry", "primitive", "circle");
+    this.el.setAttribute("material", {
+      shader: "flat",
+      side: "double",
+      src: "#arrow"
+    });
+    this.el.setAttribute("material", "color", this.data.color);
+  },
+
+  events: {
+    mouseenter: function (ev) {
+      this.data.color = this.el.getAttribute("material").color;
+      this.el.setAttribute("material", "color", "#5ef7ff");
+    },
+    mouseleave: function (ev) {
+      this.el.setAttribute("material", "color", this.data.color);
+    }
+  },
+});
+
+// register the navpoint component as a primitive
+AFRAME.registerPrimitive("t-navpoint", {
+  defaultComponents: {
+    navpoint: {},
+  },
+  mappings: {
+    color: "navpoint.color",
   }
 });
 
