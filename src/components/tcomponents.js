@@ -20,7 +20,7 @@ AFRAME.registerComponent('click-listener', {
 AFRAME.registerComponent("infopoint", {
   schema: {
     color: { type: "string", default: "blue" },
-    radius: { type: "string", default: ".5" }
+    radius: { type: "string", default: ".4" }
   },
 
   init: function () {
