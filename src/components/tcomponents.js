@@ -20,7 +20,9 @@ AFRAME.registerComponent('click-listener', {
 AFRAME.registerComponent("infopoint", {
   schema: {
     color: { type: "string", default: "blue" },
-    radius: { type: "string", default: ".4" }
+    radius: { type: "string", default: ".4" },
+    iTitle: { type: "string", default: "NO INFO YET" },
+    iBody: { type: "string", default: "NO CONTENT YET" }
   },
 
   init: function () {
@@ -34,6 +36,8 @@ AFRAME.registerComponent("infopoint", {
     mouseenter: function (ev) {
       this.data.color = this.el.getAttribute("material").color;
       this.el.setAttribute("material", "color", "#5ef7ff");
+      console.log("Title:", this.data.iTitle);
+      console.log("Body:", this.data.iBody);
     },
     mouseleave: function (ev) {
       this.el.setAttribute("material", "color", this.data.color);
@@ -48,7 +52,9 @@ AFRAME.registerPrimitive("t-infopoint", {
   },
   mappings: {
     color: "infopoint.color",
-    radius: "infopoint.radius"
+    radius: "infopoint.radius",
+    title: "infopoint.iTitle",
+    body: "infopoint.iBody"
   }
 });
 
