@@ -1,0 +1,45 @@
+/* Style for popout iframe and its content rows. */
+iframe {
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 840px;
+    height: 65%;
+    border: black solid 2px;
+}
+
+.no-padding {
+    padding: 0 !important;
+}
+
+#the-popout {
+    height: 100%;
+    width: 100%;
+    background-color: #bfffff;
+    padding: 0px;
+    /* margin: 15px 15px; */
+}
+
+#the-title-row {
+    margin: 0px;
+    padding: 20px 0px 10px 0px;
+    text-align: center;
+}
+
+#close-btn-col {
+    padding: 0px 0px 0px 24px;
+}
+
+#close-btn {
+    margin: 6px 0px 0px 0px;
+}
+
+#the-image-row {
+    border: blue solid 1px;
+    margin: 10px 15px 20px 15px;
+    padding: 0px;
+}
+
+#the-body-row {
+    margin: 10px;
+}
