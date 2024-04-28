@@ -1,3 +1,36 @@
+// const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
+
+function showInfoPopup (info) {
+  let theIFrame = document.querySelector("#the-iframe");
+  console.log("theIFrame:", theIFrame);     // for DEBUG
+
+  if (theIFrame.style.display == "block") {
+    theIFrame.style.display = "none";
+  } else {
+    let theTitle = theIFrame.contentDocument.querySelector("#the-title");
+    console.log("theTitle:", theTitle);       // for DEBUG
+    theTitle.innerText = info.title;
+
+    let theImage = theIFrame.contentDocument.querySelector("#the-image");
+    console.log("theImage:", theImage);       // for DEBUG
+
+    let theBody = theIFrame.contentDocument.querySelector("#the-body");
+    console.log("theBody:", theBody);         // for DEBUG
+    theBody.innerText = info.body;
+
+    // await sleepNow(1000);
+    let closeBtn = theIFrame.contentDocument.querySelector("#close-btn");
+    console.log("closeBtn:", closeBtn);       // for DEBUG
+    if (closeBtn) {
+      closeBtn.addEventListener("click", () => {
+        document.querySelector("#the-iframe").style.display = "none";
+      });
+    };
+
+    theIFrame.style.display = "block";
+  };
+};
+
 
 // Listen for cursor clicks, modify colors of clicked 3D model object, and report
 // click event details to the browser console.
@@ -45,7 +78,8 @@ AFRAME.registerComponent("infopoint", {
       var hasKey = this.data.infoKey in tourInfo;
       if (hasKey) {
         var info = tourInfo[this.data.infoKey];
-        console.log(info);
+        // console.log(info);                  // for DEBUG
+        showInfoPopup(info);
       } else {
         console.log("WARNING: No info data found for key:", this.data.infoKey);
       };
