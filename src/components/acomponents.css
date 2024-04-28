@@ -1,15 +1,3 @@
-/* these will help ensure that the popout positions correctly on the lhs of the screen */
-iframe {
-    position: absolute;
-    top: 25%;
-    left: 10%;
-    width: 800px;
-    height: 50%;
-    background-color: #5ef7ff;
-    border: black solid 2px;
-}
-
-
 /* This holds the spinner when the scene is loading instead of just showing a blank page. */
 #loaderHolder {
     height: 100%;
