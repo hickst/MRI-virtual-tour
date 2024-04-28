@@ -1,10 +1,11 @@
 /* these will help ensure that the popout positions correctly on the lhs of the screen */
 iframe {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 50%;
-    height: 100%;
+    top: 25%;
+    left: 10%;
+    width: 800px;
+    height: 50%;
+    background-color: #5ef7ff;
     border: black solid 2px;
 }
 
