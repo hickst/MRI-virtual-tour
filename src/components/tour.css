@@ -15,7 +15,7 @@ iframe {
 #the-popout {
     height: 100%;
     width: 100%;
-    background-color: #bfffff;
+    background-color: #afffff;
     padding: 0px;
     /* margin: 15px 15px; */
 }
@@ -34,12 +34,12 @@ iframe {
     margin: 6px 0px 0px 0px;
 }
 
-#the-image-row {
-    border: blue solid 1px;
-    margin: 10px 15px 20px 15px;
-    padding: 0px;
-}
 
 #the-body-row {
     margin: 10px;
+}
+
+#the-image-row {
+    margin: 10px 15px 20px 15px;
+    padding: 0px;
 }

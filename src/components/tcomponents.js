@@ -2,25 +2,42 @@
 
 function showInfoPopup (info) {
   let theIFrame = document.querySelector("#the-iframe");
-  console.log("theIFrame:", theIFrame);     // for DEBUG
+  // console.log("theIFrame:", theIFrame);     // for DEBUG
 
   if (theIFrame.style.display == "block") {
     theIFrame.style.display = "none";
   } else {
     let theTitle = theIFrame.contentDocument.querySelector("#the-title");
-    console.log("theTitle:", theTitle);       // for DEBUG
-    theTitle.innerText = info.title;
+    // console.log("theTitle:", theTitle);       // for DEBUG
+    // console.log("info.title:", info.title);   // for DEBUG
+    if (info.title === undefined) {
+      theTitle.innerText = "No title found in the '_info.js' data file";
+    } else {
+      theTitle.innerText = info.title;
+    };
 
     let theImage = theIFrame.contentDocument.querySelector("#the-image");
-    console.log("theImage:", theImage);       // for DEBUG
+    // console.log("theImage:", theImage);       // for DEBUG
+    // console.log("info.image:", info.image);   // for DEBUG
+    if (info.image) {
+      theImage.setAttribute("src", info.image);
+      theImage.style.visibility = null;
+    } else {
+      theImage.style.visibility = "hidden";
+    };
 
     let theBody = theIFrame.contentDocument.querySelector("#the-body");
-    console.log("theBody:", theBody);         // for DEBUG
-    theBody.innerText = info.body;
+    // console.log("theBody:", theBody);         // for DEBUG
+    // console.log("info.body:", info.body);     // for DEBUG
+    if (info.body === undefined) {
+      theBody.innerHTML = "No body info found in the '_info.js' data file";
+    } else {
+      theBody.innerHTML = info.body;
+    };
 
     // await sleepNow(1000);
     let closeBtn = theIFrame.contentDocument.querySelector("#close-btn");
-    console.log("closeBtn:", closeBtn);       // for DEBUG
+    // console.log("closeBtn:", closeBtn);       // for DEBUG
     if (closeBtn) {
       closeBtn.addEventListener("click", () => {
         document.querySelector("#the-iframe").style.display = "none";
