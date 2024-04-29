@@ -6,8 +6,8 @@ var tourInfo = {
   },
   "MRIbore": {
     "title": "Scanner Bore and Coils",
-    "image": "/mri/images/es_bore_coil.png",
-    "body": "The research subject is scanned inside this central tube, called the 'bore'. At the opening of the bore, you can see two different coils, which are antennas that receive radio frequencies from your body and transmit data to the computer. The head coil (white) is a hard coil that fits like a cage around the participant's head. The red coil is soft and lies on top of the participant. We have a variety of different coils for different body parts."
+    "image": "/mri/images/es_bore_coils.jpg",
+    "body": "The research subject is scanned inside this central tube, called the 'bore'. At the opening of the bore, you can see two different coils, which are antennas that receive radio frequencies from your body and transmit data to the computer. The head coil (white) is a hard coil that fits like a cage around the participant's head. The carotid (red) coil is more adjustable when placed on the participant. We have a variety of different coils for different body parts."
   },
   "physioCart": {
     "title": "Physiological Monitoring Cart",
