@@ -5,7 +5,7 @@
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="/src/components/tcomponents.js"></script>
   <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
-  <script src="/public/enter_scanner_info.js"></script>
+  <script src="/mri/enter_scanner_info.js"></script>
 
   <link rel="stylesheet" href="/src/components/tour.css" />
 </head>
@@ -18,7 +18,7 @@
 
     <!-- Asset management -->
     <a-assets>
-      <img id="enter-scanner" src="/public/enter_scanner.jpg" />
+      <img id="enter-scanner" src="/mri/enter_scanner.jpg" />
       <img id="arrow" src="/src/assets/arrow.png" />
     </a-assets>
 
@@ -32,17 +32,17 @@
 
     <!-- Navigation circles: click to jump to another scene. -->
     <t-navpoint id="to-patch-panel"
-                link="href: /public/patch_panel.html"
+                link="href: /mri/patch_panel.html"
                 position="0 -10 -17" rotation="90 -110 0">
     </t-navpoint>
 
     <t-navpoint id="to-back2"
-                link="href: /public/scanner_back2.html"
+                link="href: /mri/scanner_back2.html"
                 position="14 -8 -17" rotation="-80 -40 0" scale=".8 .8 .8">
     </t-navpoint>
 
     <t-navpoint id="to-console"
-                link="href: /public/console.html"
+                link="href: /mri/console.html"
                 position="14 -10 -17" rotation="100 -35 0" scale=".9 .9 .9">
     </t-navpoint>
 
