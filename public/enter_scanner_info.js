@@ -14,10 +14,4 @@ var tourInfo = {
     "image": "/public/images/es_physio_cart.jpg",
     "body": "Physiological monitoring equipment for participant stats (e.g., pulse, CO2, and blood pressure). This works together with the wireless Philips Expression IP5 display at the Syngo (MRI console) workstation.<br>Model name and number: Philips Expression MR400"
   },
-  "NO_TITLE_BAD": {
-    "body": "Oops, this should have a TITLE."
-  },
-  "NO_BODY_BAD": {
-    "title": "Oops, this should have a BODY."
-  },
 };
