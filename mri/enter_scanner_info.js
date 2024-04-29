@@ -14,4 +14,9 @@ var tourInfo = {
     "image": "/mri/images/es_physio_cart.jpg",
     "body": "Physiological monitoring equipment for participant stats (e.g., pulse, CO2, and blood pressure). This works together with the wireless Philips Expression IP5 display at the Syngo (MRI console) workstation.<br>Model name and number: Philips Expression MR400"
   },
+  "scanTable": {
+    "title": "Scanner Table, Headphones, Coils, and the Bore",
+    "image": "/mri/images/es_scan_table.jpg",
+    "body": "The research participant lies on the scanner table, which is then moved horizontally into the bore for scanning. When completely out of the magnet, the table may also be moved vertically.<br/>Participant comfort is very important to minimizing movement and participants are made more comfortable with a variety of soft supports (e.g., for raising the knees, supporting the neck, or cushioning the head)."
+  },
 };
