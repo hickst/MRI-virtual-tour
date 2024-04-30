@@ -21,10 +21,13 @@
     padding: 0 !important;
 }
 
+#info_popup {
+    background-color: #afffff;
+}
+
 #the-popout {
     height: 100%;
     width: 100%;
-    background-color: #afffff;
     padding: 0px;
     /* margin: 15px 15px; */
 }
