@@ -10,6 +10,6 @@ var tourInfo = {
   },
   "CRdoor": {
     "title": "Door to the Control Room",
-    "body": "One enters and exits the Scanner room through this door, leading to the Control room. The door, itself, is sheathed in copper and must be closed while the scanner is in operation to prevent radio signals from interferring with the scanner."
+    "body": "One enters and exits the Scanner room through this door, leading to the Control room. The door, itself, is sheathed in copper and must be closed while the scanner is in operation to prevent radio signals from interfering with the scanner."
   },
 };

@@ -2,7 +2,7 @@ var tourInfo = {
   "MRI": {
     "title": "MRI Research Scanner",
     "image": "/mri/images/es_dot_control.jpg",
-    "body": "The MRI Research scanner is a Siemens Skyra 3T machine. The small display above the scanner bore is called the DOT (Day Optimized Throughput) and shows status information concerning patient position, connected coils and more."
+    "body": "The MRI Research scanner is a Siemens Skyra 3T machine. The small display above the scanner bore is called the DOT (Day Optimized Throughput) and shows status information concerning patient position, connected coils, and other items. Below the DOT display, on either side, are controls consisting of a jog wheel and additional buttons. These are used to position the table (via a projected crosshair light) and to adjust patient comfort settings; such as headphone volume, ambient light, and bore ventilation."
   },
   "MRIbore": {
     "title": "Scanner Bore and Coils",
