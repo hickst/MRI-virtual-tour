@@ -9,4 +9,13 @@ var tourInfo = {
     "image": "/mri/images/sb1_breast_coil_closet.jpg",
     "body": "Closet opens to reveal a breast coil sitting on top of a small ladder."
   },
+  "gurney": {
+    "title": "MRI-Safe Gurney",
+    "image": "/mri/images/sb1_gurney.jpg",
+    "body": "This gurney can be used to remove a participant from the MR scanner room in case of an emergency. For example, if a participant had a heart attack you would want to remove them from the scanner room so that EMTs would not have to work around the strong magnetic field."
+  },
+  "controlWindow": {
+    "title": "Control Room Window",
+    "body": "The control room window allows the MRI technician to monitor activities in the scanner room while sitting at the operater's console. The window contains an embedded metal mesh to block stray radio signals into and out of the scanner room. The patch panel, directly below the window, allows cables to be connected from the console room to the scanner room while blocking unwanted radio frequencies."
+  },
 };
