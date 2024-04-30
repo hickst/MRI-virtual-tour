@@ -48,8 +48,10 @@
     </t-navpoint>
 
     <!-- Information spheres: show info for real-world items in 360 image.-->
-    <t-infopoint id="MRItable" infokey="MRItable"
-                 position="-7 -1.4 -17">
+    <t-infopoint id="scanTable" infokey="scanTable" position="-7 -1.4 -17">
+    </t-infopoint>
+
+    <t-infopoint id="ergometerInuse" infokey="ergometerInuse" radius=".3" position="3 2 -17">
     </t-infopoint>
 
 
@@ -58,6 +60,10 @@
     <a-sky src="#patch-panel" radius="30" position="0 0 -4" rotation="-10 150 2"></a-sky>
 
   </a-scene>
+
+  <!-- The information popup iframe, used by all infopoints. -->
+  <iframe id="the-iframe" name="the-iframe" class="iframeRight"
+          src="/src/info_popup.html" style="display:none" />
 
 </body>
 </html>
