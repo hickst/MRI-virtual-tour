@@ -19,4 +19,9 @@ var tourInfo = {
     "image": "/mri/images/pp_injector.jpg",
     "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the control room by a dedicated display at the console.<br>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
   },
+  "phantoms": {
+    "title": "Phantoms",
+    "image": "/mri/images/pp_phantom.jpg",
+    "body": "Phantoms are specially designed objects containing materials to mimic living tissue. Materials include plastics, salt solutions, silicones, epoxy, polyurethane foams, carbon powder, water, radioactive substances, and even absorbant polymers like those used in disposable diapers. Because phantoms have known qualities they are scanned on a regular basis to provide quality control for tuning the scanner.",
+  },
 };
