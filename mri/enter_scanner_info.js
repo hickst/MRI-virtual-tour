@@ -12,7 +12,7 @@ var tourInfo = {
   "physioCart": {
     "title": "Physiological Monitoring Cart",
     "image": "/mri/images/es_physio_cart.jpg",
-    "body": "Physiological monitoring equipment for participant stats (e.g., pulse, CO2, and blood pressure). This works together with the wireless Philips Expression IP5 display at the Syngo (MRI console) workstation.<br>Model name and number: Philips Expression MR400"
+    "body": "Physiological monitoring equipment for participant stats (e.g., pulse, CO2, and blood pressure). This works together with the wireless Philips Expression IP5 display at the Syngo (MRI console) workstation.<br>Model Name: Philips Expression MR400"
   },
   "scanTable": {
     "title": "Scanner Table, Headphones, Coils, and the Bore",

@@ -1,8 +1,17 @@
 /* Style for popout iframe and its content rows. */
-iframe {
+.iframeLeft {
     position: absolute;
     top: 3%;
     left: 3%;
+    width: 840px;
+    height: 80%;
+    border: black solid 2px;
+}
+
+.iframeRight {
+    position: absolute;
+    top: 3%;
+    left: 50%;
     width: 840px;
     height: 80%;
     border: black solid 2px;

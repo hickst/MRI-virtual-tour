@@ -4,6 +4,8 @@
 <head>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="/src/components/tcomponents.js"></script>
+  <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
+  <script src="/mri/scanner_back1_info.js"></script>
 
   <link rel="stylesheet" href="/src/components/tour.css"></script>
 </head>
@@ -41,14 +43,18 @@
     </t-navpoint>
 
     <!-- Information spheres: show info for real-world items in 360 image.-->
-    <t-infopoint id="info1" position="-6.8 1.4 -17"></t-infopoint>
-
+    <t-infopoint id="displayTrolley" infokey="displayTrolley" position="-6.8 1.4 -17">
+    </t-infopoint>
 
     <!-- The sky sphere on which the 360 image is projected. The sky is rotated
          slightly in each scene for best viewing. -->
     <a-sky src="#scanner-back1" radius="30" rotation="0 100 15" position="0 0 -1"></a-sky>
 
   </a-scene>
+
+  <!-- The information popup iframe, used by all infopoints. -->
+  <iframe id="the-iframe" name="the-iframe" class="iframeRight"
+          src="/src/info_popup.html" style="display:none" />
 
 </body>
 </html>
