@@ -19,10 +19,15 @@ var tourInfo = {
     "image": "/mri/images/pp_injector.jpg",
     "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the control room by a dedicated display at the console.<br>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
   },
+  "ergometerPower": {
+    "title": "Ergometer Power Supply and Settings",
+    "image": "/mri/images/pp_ergometer_power.jpg",
+      "body": "The power supply (white box) and settings control box (black) for the ergometer.",
+  },
   "phantoms": {
     "title": "Phantoms",
     "image": "/mri/images/pp_phantom.jpg",
-    "body": "Phantoms are specially designed objects containing materials to mimic living tissue. Materials include plastics, salt solutions, silicones, epoxy, polyurethane foams, carbon powder, water, radioactive substances, and even absorbant polymers like those used in disposable diapers. Because phantoms have known qualities they are scanned on a regular basis to provide quality control for tuning the scanner.",
+    "body": "Phantoms are specially designed objects containing materials to mimic living tissue. Materials include plastics, salt solutions, silicones, epoxy, polyurethane foams, carbon powder, water, radioactive substances, and even absorbant polymers like those used in disposable diapers. Because phantoms have known qualities, they are scanned on a regular basis to provide quality control for tuning the scanner.",
   },
   "headcoil32": {
     "title": "32-Channel Siemens Head Coil",
@@ -32,6 +37,6 @@ var tourInfo = {
   "MRtablet": {
     "title": "MR Compatible Writing Tablet and Pen",
     "image": "/mri/images/pp_tablet.jpg",
-    "body": "This MR compatible writing tablet and pen act like a mouse so that pen contacts can be use by stimulus presentation software (Eprime, for example). The primary use of the tablet is to register touches, but is not suitable for capturing writing or drawing.<br/>This academically-developed tablet is described in this article: Tam, F., Churchill, N. W., Strother, S. C., & Graham, S. J. (2008). System for computerized writing and drawing during fMRI. Proc Intl Soc Mag Reson Med.",
+    "body": "This MR compatible writing tablet and pen act like a mouse so that pen contacts can be recorded by stimulus presentation software (Eprime, for example). The primary use of the tablet is to register touches, but it is not well-suited for capturing writing or drawing.<br/>This tablet was developed by the Rotman Institute and is described in this article: Tam, F., Churchill, N. W., Strother, S. C., & Graham, S. J. (2008). System for computerized writing and drawing during fMRI. Proc Intl Soc Mag Reson Med.",
   },
 };
