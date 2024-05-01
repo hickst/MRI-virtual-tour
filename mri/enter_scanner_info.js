@@ -24,4 +24,9 @@ var tourInfo = {
     "image": "/mri/images/es_ergometer.jpg",
     "body": "In many diseases, symptoms will only occur during stress, therefore a dynamic evaluation is required. The MR ergometer is specifically designed for exercising, inducing stress during MRI examinations, in lieu of using drugs.<br/>Model Name: Lode MR Ergometer",
   },
+  "quenchButton": {
+    "title": "Emergency Quench Button",
+    "image": "/mri/images/quench_button.jpg",
+    "body": "This is an additional emergency magnet quench button.",
+  },
 };
