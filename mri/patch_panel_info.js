@@ -29,4 +29,9 @@ var tourInfo = {
     "image": "/mri/images/pp_headcoil.jpg",
     "body": "The head coil, sometimes called a birdcage coil, is used for neuroimaging. A coil is plugged in to the scanner and acts like an antenna. It receives radio signals from your body and transmits data to the computer to construct the image. A mirror on the top of the head coil allows the participant to see the task display for experiments that involve visual stimuli. The plug-box that is used to attach the coil to the scanner table is visible in the picture (white box/pipe at bottom left of photo).",
   },
+  "MRtablet": {
+    "title": "MR Compatible Writing Tablet and Pen",
+    "image": "/mri/images/pp_tablet.jpg",
+    "body": "This MR compatible writing tablet and pen act like a mouse so that pen contacts can be use by stimulus presentation software (Eprime, for example). The primary use of the tablet is to register touches, but is not suitable for capturing writing or drawing.<br/>This academically-developed tablet is described in this article: Tam, F., Churchill, N. W., Strother, S. C., & Graham, S. J. (2008). System for computerized writing and drawing during fMRI. Proc Intl Soc Mag Reson Med.",
+  },
 };
