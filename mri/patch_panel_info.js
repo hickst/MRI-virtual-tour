@@ -24,4 +24,9 @@ var tourInfo = {
     "image": "/mri/images/pp_phantom.jpg",
     "body": "Phantoms are specially designed objects containing materials to mimic living tissue. Materials include plastics, salt solutions, silicones, epoxy, polyurethane foams, carbon powder, water, radioactive substances, and even absorbant polymers like those used in disposable diapers. Because phantoms have known qualities they are scanned on a regular basis to provide quality control for tuning the scanner.",
   },
+  "headcoil32": {
+    "title": "32-Channel Siemens Head Coil",
+    "image": "/mri/images/pp_headcoil.jpg",
+    "body": "The head coil, sometimes called a birdcage coil, is used for neuroimaging. A coil is plugged in to the scanner and acts like an antenna. It receives radio signals from your body and transmits data to the computer to construct the image. A mirror on the top of the head coil allows the participant to see the task display for experiments that involve visual stimuli. The plug-box that is used to attach the coil to the scanner table is visible in the picture (white box/pipe at bottom left of photo).",
+  },
 };
