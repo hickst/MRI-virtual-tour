@@ -24,6 +24,11 @@ var tourInfo = {
     "image": "/mri/images/pp_injector.jpg",
     "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the control room by a dedicated display at the console.<br>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
   },
+  "epoButton": {
+    "title": "Emergency Power-Off Button",
+    "image": "/mri/images/pp_epo_button.jpg",
+    "body": "Emergency power off button.",
+  },
   "ergometerPower": {
     "title": "Ergometer Power Supply and Settings",
     "image": "/mri/images/pp_ergometer_power.jpg",
