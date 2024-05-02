@@ -4,8 +4,10 @@
 <head>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
   <script src="/src/components/tcomponents.js"></script>
+  <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
+  <script src="/mri/console_info.js"></script>
 
-  <link rel="stylesheet" href="/src/components/tour.css"></script>
+  <link rel="stylesheet" href="/src/components/tour.css" />
 </head>
 
 <body>
@@ -28,13 +30,34 @@
 
 
     <!-- Entities generated using A-Frame templates. -->
+
+    <!-- Navigation circles: click to jump to another scene. -->
+    <a-plane id="consolePlane" link="href: /mri/console_zoom.html"
+             color="red" height="15" width="11.5"
+             material="opacity: 0.1; transparent: true"
+             position="2.8 2 -10" rotation="0 0 0">
+    </a-plane>
+
+    <a-plane id="taskPlane" link="href: /mri/task_zoom.html"
+             color="green" height="15" width="9.6"
+             material="opacity: 0.2; transparent: true"
+             position="-7.8 2 -10" rotation="0 0 0">
+    </a-plane>
+
     <t-navpoint id="to-enter-scanner"
                 link="href: /mri/enter_scanner.html"
                 position="22 -10 -17" rotation="90 180 0">
     </t-navpoint>
 
     <!-- Information spheres: show info for real-world items in 360 image.-->
-    <t-infopoint id="info1" position="5 7 -17"></t-infopoint>
+    <t-infopoint id="blankets" infoKey="blankets" position="24 -7 10.2">
+    </t-infopoint>
+
+    <t-infopoint id="MRglasses" infoKey="MRglasses" position="19.5 -10 13">
+    </t-infopoint>
+
+    <t-infopoint id="computerRoom" infoKey="computerRoom" position="-1.5 0 15">
+    </t-infopoint>
 
 
     <!-- The sky sphere on which the 360 image is projected. The sky is rotated
@@ -42,6 +65,10 @@
     <a-sky src="#console" radius="30" rotation="-12 154 9" position="0 0 -2"></a-sky>
 
   </a-scene>
+
+  <!-- The information popup iframe, used by all infopoints. -->
+  <iframe id="the-iframe" name="the-iframe" class="iframeLeft"
+          src="/src/info_popup.html" style="display:none" />
 
 </body>
 </html>
