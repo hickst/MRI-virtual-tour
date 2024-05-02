@@ -30,19 +30,31 @@
       <div class="col-1"></div>
       <div class="col-10">
         <button id="computer-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#computerModal"
                 class="btn btn-success info-btn">Computer</button>
+
+        <button id="display-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#displayModal"
+                class="btn btn-success info-btn">Display</button>
+
         <button id="physioP-btn" type="button"
                 class="btn btn-primary info-btn">PMU</button>
+
         <button id="physioS-btn" type="button"
                 class="btn btn-info info-btn">Physiology</button>
+
         <button id="quench-btn" type="button"
                 class="btn btn-danger info-btn">Quench</button>
+
         <button id="poe-btn" type="button"
                 class="btn btn-warning info-btn">Power Buttons</button>
+
         <button id="inject-btn" type="button"
                 class="btn btn-light info-btn">Injector</button>
+
         <button id="comm-btn" type="button"
                 class="btn btn-dark info-btn">Intercom</button>
+
         <button id="scope-btn" type="button"
                 class="btn btn-custom-violet info-btn">Oscilloscope</button>
       </div>
@@ -55,9 +67,51 @@
       </div>
       <div class="col-1"></div>
     </div>
-
   </div>
 
+  <div id="computerModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Computer Workstation</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          The Syngo workstation computer is used to select, run, and edit scan sequences.
+          Once data has been collected, it can be copied to a USB drive for transport.
+          The large monitor near the ceiling mirrors the smaller console monitor and
+          facilitates teaching and observation. The actual computer (black) is barely visible
+          (in the MRI Operator's Console photo) in a cabinet under the desk, on the right.
+        </div>
+        <div id="mod-image-row">
+          <img id="mod-image" src="/mri/images/cr_computer.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="displayModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Display Monitor</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          The large monitor near the ceiling mirrors the smaller console monitor and
+          facilitates teaching and observation.
+        </div>
+        <div id="mod-image-row">
+          <img id="mod-image" src="/mri/images/cr_display.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous">
+  </script>
 
 </body>
 </html>

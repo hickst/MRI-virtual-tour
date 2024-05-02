@@ -21,6 +21,10 @@
     padding: 0 !important;
 }
 
+#info_popup {
+    background-color: #afffff;
+}
+
 #the-popout {
     height: 100%;
     width: 100%;
@@ -106,5 +110,27 @@
 
 .info-btn {
     margin: 0px 5px 0px 0px;
+    padding: 6px 8px;
     --bs-btn-focus-shadow-rgb: 255, 255, 255;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.modal-content {
+    --bs-modal-bg: #bfffff;
+}
+
+.modal-header {
+    border-bottom-style: none;
+    padding: 8px 16px;
+}
+
+.modal-body {
+    padding: 8px 16px 16px 16px;
+}
+
+#mod-image {
+    width: 100%;
 }
