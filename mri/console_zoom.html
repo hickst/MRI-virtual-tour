@@ -15,14 +15,36 @@
 <body id="zoom-body">
   <div id="console-zoom" class="container zoomer zoom-size">
     <div class="row zoom-title">
-      <div class="col-2"></div>
-      <div class="col-8">
+      <div class="col-1"></div>
+      <div class="col-9">
         <h2 >MRI Operator's Console</h2>
       </div>
-      <div id="close-btn-col" class="col-1">
+      <div id="close-btn-col-z" class="col-1">
         <form action="/mri/console.html">
-          <button id="close-btn" type="submit" class="btn-close"></button>
+          <button id="close-btn-z" type="submit" class="btn-close"></button>
         </form>
+      </div>
+    </div>
+
+    <div class="row btn-row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <button id="computer-btn" type="button"
+                class="btn btn-success info-btn">Computer</button>
+        <button id="physioS-btn" type="button"
+                class="btn btn-info info-btn">Physiology</button>
+        <button id="physioP-btn" type="button"
+                class="btn btn-primary info-btn">PMU</button>
+        <button id="quench-btn" type="button"
+                class="btn btn-danger info-btn">Quench</button>
+        <button id="poe-btn" type="button"
+                class="btn btn-warning info-btn">Power Buttons</button>
+        <button id="inject-btn" type="button"
+                class="btn btn-light info-btn">Injector</button>
+        <button id="comm-btn" type="button"
+                class="btn btn-dark info-btn">Intercom</button>
+        <button id="scope-btn" type="button"
+                class="btn btn-custom-violet info-btn">Oscilloscope</button>
       </div>
     </div>
 
@@ -35,6 +57,7 @@
     </div>
 
   </div>
+
 
 </body>
 </html>
