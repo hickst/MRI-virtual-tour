@@ -56,6 +56,7 @@
 
 
 /* console zoom image is width: 1100px; height: 1280px; */
+/* console zoom image is width: 989px; height: 1266px; */
 
 #close-btn-col-z {
     background-color: white;
@@ -92,11 +93,11 @@
 }
 
 .zoom-size {
-    max-width: 1100px;
+    max-width: 989px;
 }
 
 .btn-row {
-    margin: 15px 0px 10px 25px;
+    margin: 15px 0px 10px 10px;
 }
 
 .btn-custom-violet {
