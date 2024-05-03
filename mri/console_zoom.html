@@ -38,6 +38,7 @@
                 class="btn btn-success info-btn">Display</button>
 
         <button id="physioP-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#pmuModal"
                 class="btn btn-primary info-btn">PMU</button>
 
         <button id="physioS-btn" type="button"
@@ -83,8 +84,8 @@
           facilitates teaching and observation. The actual computer (black) is barely visible
           (in the MRI Operator's Console photo) in a cabinet under the desk, on the right.
         </div>
-        <div id="mod-image-row">
-          <img id="mod-image" src="/mri/images/cr_computer.jpg"></img>
+        <div>
+          <img class="mod-image" src="/mri/images/cr_computer.jpg"></img>
         </div>
       </div>
     </div>
@@ -101,8 +102,28 @@
           The large monitor near the ceiling mirrors the smaller console monitor and
           facilitates teaching and observation.
         </div>
-        <div id="mod-image-row">
-          <img id="mod-image" src="/mri/images/cr_display.jpg"></img>
+        <div>
+          <img class="mod-image" src="/mri/images/cr_display.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pmuModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Siemens PMU (Physiological Measurement Unit)</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          These wireless physiological monitors are shown in their charging station.
+          When attached to a participant, they gather data such as the participant's ECG,
+          respiration, and pulse rate. This physiological data can be viewed at the
+          DOT display (on the scanner) and on the Syngo workstation computer.
+        </div>
+        <div>
+          <img id="pmu-img" class="mod-image" src="/mri/images/cr_pmu.jpg"></img>
         </div>
       </div>
     </div>
