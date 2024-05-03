@@ -33,10 +33,6 @@
                 data-bs-toggle="modal" data-bs-target="#computerModal"
                 class="btn btn-success info-btn">Computer</button>
 
-        <button id="display-btn" type="button"
-                data-bs-toggle="modal" data-bs-target="#displayModal"
-                class="btn btn-success info-btn">Display</button>
-
         <button id="inject-btn" type="button"
                 data-bs-toggle="modal" data-bs-target="#injectorModal"
                 class="btn btn-light info-btn">Injector</button>
@@ -44,6 +40,10 @@
         <button id="scope-btn" type="button"
                 data-bs-toggle="modal" data-bs-target="#scopeModal"
                 class="btn btn-custom-violet info-btn">Oscilloscope</button>
+
+        <button id="mic-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#micModal"
+                class="btn btn-dark info-btn">Mic</button>
 
         <button id="comm-btn" type="button"
                 data-bs-toggle="modal" data-bs-target="#displayModal"
@@ -81,6 +81,8 @@
       <div class="modal-content">
         <div class="modal-header text-center">
           <h3 class="modal-title w-100">Computer Workstation</h3>
+          <button class="btn btn-success modal-switch-btn text-nowrap"
+                  data-bs-target="#displayModal" data-bs-toggle="modal">Overhead Display</button>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
@@ -101,7 +103,9 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h3 class="modal-title w-100">Display Monitor</h3>
+          <h3 class="modal-title w-100">Overhead Display</h3>
+          <button class="btn btn-success modal-switch-btn"
+                  data-bs-target="#computerModal" data-bs-toggle="modal">Computer</button>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">

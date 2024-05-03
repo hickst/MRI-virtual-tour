@@ -136,6 +136,10 @@
     width: 100%;
 }
 
+.modal-switch-btn {
+    margin-right: 8px;
+}
+
 #pmu-img {
     width: 242px;
     margin: 0px 35% 20px; 35%;
