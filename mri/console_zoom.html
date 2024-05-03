@@ -46,7 +46,7 @@
                 class="btn btn-dark info-btn">Mic</button>
 
         <button id="comm-btn" type="button"
-                data-bs-toggle="modal" data-bs-target="#displayModal"
+                data-bs-toggle="modal" data-bs-target="#commModal"
                 class="btn btn-dark info-btn">Intercom</button>
 
         <button id="physioP-btn" type="button"
@@ -92,7 +92,7 @@
           facilitates teaching and observation. The actual computer (black) is barely visible
           (in the MRI Operator's Console photo) in a cabinet under the desk, on the right.
         </div>
-        <div>
+        <div class="mod-image-div">
           <img class="mod-image" src="/mri/images/cr_computer.jpg"></img>
         </div>
       </div>
@@ -112,7 +112,7 @@
           The large monitor near the ceiling mirrors the smaller console monitor and
           facilitates teaching and observation.
         </div>
-        <div>
+        <div class="mod-image-div">
           <img class="mod-image" src="/mri/images/cr_display.jpg"></img>
         </div>
       </div>
@@ -131,7 +131,7 @@
           system, located in the scanner room.<br/>
           Model Name: BRACCO Injeneering EmpowerMR Contrast Injection System Display
         </div>
-        <div>
+        <div class="mod-image-div">
           <img class="mod-image" src="/mri/images/cr_injector.jpg"></img>
         </div>
       </div>
@@ -151,8 +151,48 @@
           by Biomedical Engineers.<br/>
           Model Name: Agilent DSO1024A Oscilloscope 200MHz 4-Channels
         </div>
-        <div>
+        <div class="mod-image-div">
           <img class="mod-image" src="/mri/images/cr_oscilloscope.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="micModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Desktop Microphone</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          The Shure microphone allows the MRI technician and researchers to easily talk to the
+          participant, before and between scans. It is considered good practice to
+          keep the partipant informed about what to expect and how long each scan will be.
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="/mri/images/cr_mic.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="commModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Intercom / Stop Scan</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          The intercom allows personnel and participants to communicate during the scan.
+          The red STOP button will stop the scan (if, for example, the participant is
+          uncomfortable). The STOP button will also stop scanner table movement
+          (this is occasionally useful if hair or clothing gets caught
+          when the table is moving in or out of the scanner).
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="/mri/images/cr_intercom.jpg"></img>
         </div>
       </div>
     </div>
@@ -171,8 +211,8 @@
           respiration, and pulse rate. This physiological data can be viewed at the
           DOT display (on the scanner) and on the Syngo workstation computer.
         </div>
-        <div>
-          <img id="pmu-img" class="mod-image" src="/mri/images/cr_pmu.jpg"></img>
+        <div class="mod-image-div">
+          <img class="mod-image" src="/mri/images/cr_pmu.jpg"></img>
         </div>
       </div>
     </div>

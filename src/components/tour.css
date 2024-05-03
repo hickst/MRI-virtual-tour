@@ -129,18 +129,19 @@
 }
 
 .modal-body {
-    padding: 8px 16px 16px 16px;
+    padding: 8px 24px 16px 24px;
 }
 
 .mod-image {
-    width: 100%;
+    width: auto;
+}
+
+.mod-image-div {
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .modal-switch-btn {
     margin-right: 8px;
-}
-
-#pmu-img {
-    width: 242px;
-    margin: 0px 35% 20px; 35%;
 }
