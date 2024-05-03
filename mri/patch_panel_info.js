@@ -11,7 +11,7 @@ var tourInfo = {
   },
   "quenchButton": {
     "title": "Emergency Quench Button",
-    "image": "/mri/images/quench_button.jpg",
+    "image": "/mri/images/sr_quench_button.jpg",
     "body": "This is an additional emergency magnet quench button.",
   },
   "patchpanel": {
