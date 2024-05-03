@@ -38,12 +38,15 @@
                 class="btn btn-success info-btn">Display</button>
 
         <button id="inject-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#injectorModal"
                 class="btn btn-light info-btn">Injector</button>
 
         <button id="scope-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#displayModal"
                 class="btn btn-custom-violet info-btn">Oscilloscope</button>
 
         <button id="comm-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#displayModal"
                 class="btn btn-dark info-btn">Intercom</button>
 
         <button id="physioP-btn" type="button"
@@ -51,12 +54,15 @@
                 class="btn btn-primary info-btn">PMU</button>
 
         <button id="physioS-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#pmuModal"
                 class="btn btn-info info-btn">Physiology</button>
 
         <button id="quench-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#pmuModal"
                 class="btn btn-danger info-btn">Quench</button>
 
         <button id="poe-btn" type="button"
+                data-bs-toggle="modal" data-bs-target="#pmuModal"
                 class="btn btn-warning info-btn">Power</button>
       </div>
     </div>
@@ -104,6 +110,25 @@
         </div>
         <div>
           <img class="mod-image" src="/mri/images/cr_display.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="injectorModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Fluids Injector Control & Display</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          This device displays information about and controls the Bracco injection
+          system, located in the scanner room.<br/>
+          Model Name: BRACCO Injeneering EmpowerMR Contrast Injection System Display
+        </div>
+        <div>
+          <img class="mod-image" src="/mri/images/cr_injector.jpg"></img>
         </div>
       </div>
     </div>
