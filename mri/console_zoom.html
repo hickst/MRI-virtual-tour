@@ -58,11 +58,11 @@
                 class="btn btn-info info-btn">Physiology</button>
 
         <button id="quench-btn" type="button"
-                data-bs-toggle="modal" data-bs-target="#pmuModal"
+                data-bs-toggle="modal" data-bs-target="#quenchModal"
                 class="btn btn-danger info-btn">Quench</button>
 
         <button id="poe-btn" type="button"
-                data-bs-toggle="modal" data-bs-target="#pmuModal"
+                data-bs-toggle="modal" data-bs-target="#powerModal"
                 class="btn btn-warning info-btn">Power</button>
       </div>
     </div>
@@ -194,7 +194,7 @@
         <div class="mod-image-div">
           <img class="mod-image" src="/mri/images/cr_intercom.jpg"></img>
         </div>
-      </div>
+&#3;      </div>
     </div>
   </div>
 
@@ -213,6 +213,58 @@
         </div>
         <div class="mod-image-div">
           <img class="mod-image" src="/mri/images/cr_pmu.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="quenchModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Emergency Quench Box</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          The big red button (center) is used in a life-threatening emergency to vent
+          all the helium from the scanner. This dire action dissipates the magnetic
+          field, which will then reach a "safe" level after several minutes.<br/><br/>
+
+          <span style="color:red; font-weight:bold">
+            Only quench the scanner in a life-threatening situation! Quenching the
+            scanner can destroy a million dollar machine.
+          </span><br/><br/>
+
+          The WARNING light (top middle) indicates if the helium level is too low.<br/>
+          The POWER light (green) indicates a satisfactory voltage supply.<br/>
+          The SYSTEM ON and SYSTEM OFF (blue) buttons can be used to perform a
+          "hard reset" of the scanner system.
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="/mri/images/cr_quench_button.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="powerModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Scan Room Purge / Power Control Buttons</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Should the breathable oxygen in the scanner room ever drop below safe levels,
+          an alarm will sound. The PURGE button (left top) can be used to exhaust the
+          bad air from the scanner room, bringing in fresh air.<br/><br/>
+          The E-STOP button (left bottom) shuts down the power to the scanner
+          in an emergency.<br/><br/>
+          The large EPO knob (on the right) is used to control power to the
+          <b>entire</b> MR system, in an emergency.
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="/mri/images/cr_poe_buttons.jpg"></img>
         </div>
       </div>
     </div>
