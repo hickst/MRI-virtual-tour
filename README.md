@@ -1,7 +1,7 @@
 ﻿
 ## MRI Scanner Virtual Tour
 
-This repository implements a 3D virtual tour of the research MRI scanning facility at the [University of Arizona](http://www.arizona.edu). The research MRI center is a heavily scheduled and restricted access facility. The author's hope is that this virtual tour can serve both to document the facility and to educate current and potential neuroimaging researchers about the resources it offers.
+This repository implements a 3D virtual tour of the research MRI scanning facility at the [University of Arizona](http://www.arizona.edu). The research MRI center is a heavily scheduled and restricted access facility. The authors' hope is that this virtual tour can serve both to document the facility and to educate current and potential neuroimaging researchers about the resources it offers.
 
 ### About
 
