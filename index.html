@@ -2,9 +2,10 @@
 <html>
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MRI Scanner VR Tour</title>
+  <title>MRI Scanner Tour</title>
 
   <!-- Latest icon font stylesheet -->
   <link rel="stylesheet"
@@ -13,33 +14,91 @@
   <!-- Compiled and minified UA Bootstrap CSS, icon font not included -->
   <link rel="stylesheet"
         href="https://cdn.uadigital.arizona.edu/lib/ua-bootstrap/v1.0.0-beta.26/ua-bootstrap.min.css">
-
-  <!--
-      <link rel="stylesheet" href="map_page_styles.css">
-      <script src="./index.js"></script>
-  -->
 </head>
 
 <body>
-  <div class="container popout">
+  <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <H1>Scanner Tour</H1>
+      <div class="col-md-1"></div>
+      <div class="col-md-7">
 
-        <H2>Console Room</H2>
-        <a href="/mri/console.html">Console Room</a><br><br>
+        <h1>MRI Scanner Virtual Tour</h1>
+        <p>
+          Welcome to a virtual tour of the U of Arizona's research MRI scanner facility.
+        </p>
+        <p>
+          Our 3T research scanner is located in the basement of the Biosciences
+          Research Laboratories (BSRL) building.
+          It is administered by the Translational Bioimaging Resource (TBIR) group,
+          under the auspices of the Office for Research, Innovation, and Impact (RII).
+        </p>
 
-        <H2>Scanner from all 4 corners</H2>
+
+        <h2>Taking the Virtual Tour</h2>
+        <p>
+          The tour uses "flat 3D" technology, which should be supported by modern
+          browsers which implement WebGL (for example: Chrome, Firefox, Safari, and Edge).
+        </p>
+        <p>
+          On 3D pages, dragging your mouse should rotate the virtual enviroment and
+          allow you to see the room from various angles. Note that because each 3D
+          scene was captured by a 3D camera at a fixed point, you cannot move into
+          or out of the scene, only rotate at the camera's fixed location.
+        </p>
+        <p>
+          As you look around the various scenes, you will see bright blue spheres,
+          we call "infospheres". Clicking on one of the infospheres will pop up
+          a window with more information about the object which the infosphere is
+          hovering near. All popups should close when the "X" button in the upper
+          right corner of the popup is clicked.
+        </p>
+        <p>
+          In the initial scene (the Console Room) you will see a red and a green
+          plane, each covering a desk cluttered with devices related to the
+          operation and/or use of the MRI. Clicking on either the red or the
+          green plane will take you to a 2D page which provides more detailed
+          information about the objects under that plane. The close button, a
+          black "X" in the upper right corner of each 2D page, will return
+          you to the main Console Room scene when clicked.
+        </p>
+        <p>
+          On the floor of 3D scenes, you may notice black discs with double arrows.
+          Clicking on one of these will navigate you to the next or previous scene.
+        </p>
+
+
+        <h3>The Tour: MRI Console Room</h3>
+        <p><a href="/mri/console.html">MRI Console Room</a></p>
+
+        <h3>The Tour: Scanner Room Walk</h3>
         <ul>
-          <li><a href="/mri/enter_scanner.html">Enter scanner room</a></li>
-          <li><a href="/mri/patch_panel.html">Scanner room, near the patch panel</a></li>
-          <li><a href="/mri/scanner_back1.html">Back of scanner, view 1</a></li>
-          <li><a href="/mri/scanner_back2.html">Back of scanner, view 2</a></li>
+          <li><a href="/mri/enter_scanner.html">Enter Scanner Room</a></li>
+          <li><a href="/mri/patch_panel.html">Scanner Room, near the Patch Panel</a></li>
+          <li><a href="/mri/scanner_back1.html">Scanner Room Back Corner 1</a></li>
+          <li><a href="/mri/scanner_back2.html">Scanner Room Back Corner 2</a></li>
         </ul>
-      </div>
-    </div>
-  </div>
+
+        <h3>About The Tour</h3>
+        <p>
+          This virtual tour was developed by
+          <a href="https://profiles.arizona.edu/person/dkp">Dr. Dianne Patterson</a>,
+          of the <a href="https://www.bic.arizona.edu/">Brain Imaging Center (BIC)</a>,
+          and Tom Hicks, in the
+          <a href="https://ischool.arizona.edu/">School of Information</a>.
+          We are grateful to Devin Bayly, of UITS, for providing us with example
+          AFrame code to jumpstart our learning.
+        </p>
+
+        <p>
+          The tour is implemented using HTML, Javascript, the
+          <a href="https://getbootstrap.com/">Bootstrap</a> frontend toolkit, and the
+          <a href="https://aframe.io">AFrame</a> web framework for building 3D/AR/VR experiences.
+        </p>
+
+      </div> <!-- col -->
+    </div> <!-- row -->
+
+  </div> <!-- container -->
 
 </body>
-
 </html>
