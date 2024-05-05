@@ -1,4 +1,9 @@
 var tourInfo = {
+  "scanDoor": {
+    "title": "Scanner Room Door",
+    "image": "/mri/images/cr_copper_door.jpg",
+    "body": "One enters and exits the Scanner room through this door. The door is sheathed in copper and must be closed while the scanner is in operation to prevent radio signals from interfering with the scanner."
+  },
   "blankets": {
     "title": "Blanket Warmer",
     "image": "/mri/images/cr_blankets.jpg",
