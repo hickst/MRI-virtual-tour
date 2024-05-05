@@ -12,7 +12,7 @@ var tourInfo = {
   "physioCart": {
     "title": "Physiological Monitoring Cart",
     "image": "/mri/images/es_physio_cart.jpg",
-    "body": "Physiological monitoring equipment for participant stats (e.g., pulse, CO2, and blood pressure). This works together with the wireless Philips Expression IP5 display at the Syngo (MRI console) workstation.<br>Model Name: Philips Expression MR400"
+    "body": "Physiological monitoring equipment for participant stats (e.g., pulse, CO2, and blood pressure). This works together with the wireless Philips Expression IP5 display at the Syngo (MRI console) workstation.<br/><br/>Model Name: Philips Expression MR400"
   },
   "scanTable": {
     "title": "Scanner Table, Headphones, Coils, and the Bore",
@@ -22,7 +22,7 @@ var tourInfo = {
   "ergometer": {
     "title": "Ergometer",
     "image": "/mri/images/es_ergometer.jpg",
-    "body": "In many diseases, symptoms will only occur during stress, therefore a dynamic evaluation is required. The MR ergometer is specifically designed for exercising, inducing stress during MRI examinations, in lieu of using drugs.<br/>Model Name: Lode MR Ergometer",
+    "body": "In many diseases, symptoms will only occur during stress, therefore a dynamic evaluation is required. The MR ergometer is specifically designed for exercising, inducing stress during MRI examinations, in lieu of using drugs.<br/><br/>Model Name: Lode MR Ergometer",
   },
   "quenchButton": {
     "title": "Emergency Quench Button",

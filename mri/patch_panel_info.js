@@ -7,7 +7,7 @@ var tourInfo = {
   "ergometerInuse": {
     "title": "Ergometer",
     "image": "/mri/images/pp_ergometer_inuse.jpg",
-    "body": "In many diseases, symptoms will only occur during stress, therefore a dynamic evaluation is required. The MR ergometer is specifically designed for exercising to induce stress during MRI examinations, in lieu of using drugs.<br/>Model Name: Lode MR Ergometer<br/>Figure: Illustration of how the ergometer is used in the MRI scanner.",
+    "body": "In many diseases, symptoms will only occur during stress, therefore a dynamic evaluation is required. The MR ergometer is specifically designed for exercising to induce stress during MRI examinations, in lieu of using drugs.<br/><br/>Model Name: Lode MR Ergometer<br/>Figure: Illustration of how the ergometer is used in the MRI scanner.",
   },
   "quenchButton": {
     "title": "Emergency Quench Button",
@@ -22,7 +22,7 @@ var tourInfo = {
   "injector": {
     "title": "Fluids Injector",
     "image": "/mri/images/pp_injector.jpg",
-    "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the control room by a dedicated display at the console.<br>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
+    "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the control room by a dedicated display at the console.<br/><br/>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
   },
   "epoButton": {
     "title": "Emergency Power-Off Button",

@@ -2,7 +2,7 @@ var tourInfo = {
   "eyetracker": {
     "title": "Eyetracker Camera",
     "image": "/mri/images/sb2_eyetracker.jpg",
-    "body": "A black eyetracking camera is perched on top of the display trolley. It features an illuminator (left) and the camera (right). The eyetracker works in conjunction with an eye-tracking computer in the control room and transfers data over a fiber optic cable. Correct placement in the scanner bore is important to buffer the device from scanner vibrations.<br/>Model Name: Eyelink 1000 by SR Research"
+    "body": "A black eyetracking camera is perched on top of the display trolley. It features an illuminator (left) and the camera (right). The eyetracker works in conjunction with an eye-tracking computer in the control room and transfers data over a fiber optic cable. Correct placement in the scanner bore is important to buffer the device from scanner vibrations.<br/><br/>Model Name: Eyelink 1000 by SR Research"
   },
   "quenchVent": {
     "title": "MRI Scanner Vent (aka Quench Vent)",
