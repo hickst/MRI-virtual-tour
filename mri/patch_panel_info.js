@@ -12,7 +12,7 @@ var tourInfo = {
   "quenchButton": {
     "title": "Emergency Quench Button",
     "image": "/mri/images/sr_quench_button.jpg",
-    "body": "This is an additional emergency magnet quench button.",
+    "body": 'This emergency magnet quench button is used in a life-threatening emergency to vent all the helium from the scanner. This dire action dissipates the magnetic field, which will then reach a "safe" level after several minutes.<br/><br/><span style="color:red; font-weight:bold">Only quench the scanner in a life-threatening situation! Quenching the scanner can destroy a million dollar machine. </span>',
   },
   "patchpanel": {
     "title": "Patch Panel",
