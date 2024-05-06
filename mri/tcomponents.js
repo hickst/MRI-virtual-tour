@@ -50,7 +50,7 @@ function showInfoPopup (info) {
 
 
 // Listen for cursor clicks, modify colors of clicked 3D model object, and report
-// click event details to the browser console.
+// click event details to the browser console. NB: for testing only, not used in tour.
 AFRAME.registerComponent('click-listener', {
   init: function () {
     var lastIndex = -1;
@@ -61,6 +61,21 @@ AFRAME.registerComponent('click-listener', {
       console.log('Click event intersection: ', evt.detail.intersection);
       console.log('MouseClick event detail: ', evt.detail.mouseEvent);
     });
+  }
+});
+
+
+// Custom Component Modifier: brighten a plane component on mouse enter, dim on mouse leave.
+AFRAME.registerComponent('plane-bright', {
+  events: {
+    mouseenter: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.5");
+      console.log("Enter EL:", this.el);   // for DEBUG
+    },
+    mouseleave: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.2");
+      console.log("Leave EL:", this.el);   // for DEBUG
+    },
   }
 });
 
