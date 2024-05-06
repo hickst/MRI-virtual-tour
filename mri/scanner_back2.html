@@ -3,11 +3,11 @@
 
 <head>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  <script src="/src/components/tcomponents.js"></script>
+  <script src="tcomponents.js"></script>
   <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
-  <script src="/mri/scanner_back2_info.js"></script>
+  <script src="scanner_back2_info.js"></script>
 
-  <link rel="stylesheet" href="/src/components/tour.css"></script>
+  <link rel="stylesheet" href="../tour.css"></script>
 </head>
 
 <body>
@@ -19,8 +19,8 @@
 
     <!-- Asset management -->
     <a-assets>
-      <img id="scanner-back2" src="/mri/scanner_back2.jpg" />
-      <img id="arrow" src="/src/assets/arrow.png" />
+      <img id="scanner-back2" src="../images/scanner_back2.jpg" />
+      <img id="arrow" src="../images/arrow.png" />
     </a-assets>
 
     <!-- Entity which wraps the camera -->
@@ -31,12 +31,12 @@
 
     <!-- Entities generated using A-Frame templates. -->
     <t-navpoint id="to-back1"
-                link="href: /mri/scanner_back1.html"
+                link="href: scanner_back1.html"
                 position="7 -10 -17" rotation="80 105 0">
     </t-navpoint>
 
     <t-navpoint id="to-enter-scanner"
-                link="href: /mri/enter_scanner.html"
+                link="href: enter_scanner.html"
                 position="-11 -10 -17" rotation="80 -150 0">
     </t-navpoint>
 
@@ -59,7 +59,7 @@
 
   <!-- The information popup iframe, used by all infopoints. -->
   <iframe id="the-iframe" name="the-iframe" class="iframeRight"
-          src="/src/info_popup.html" style="display:none" />
+          src="info_popup.html" style="display:none" />
 
 </body>
 </html>
