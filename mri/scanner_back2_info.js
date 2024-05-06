@@ -6,7 +6,7 @@ var tourInfo = {
   },
   "quenchVent": {
     "title": "MRI Scanner Vent (aka Quench Vent)",
-    "body": "This large square pipe extending from the scanner to the ceiling can safely vent large amounts of super cold helium outside the building during a catastrophic emergency. A vent pipe must meet the diameter and pressure requirements of the MRI system manufacturer and be fully insulated."
+    "body": "This large square shaft rising to the ceiling can safely vent large amounts of super-cold helium to the roof of the building during a catastrophic emergency. A vent shaft must meet the diameter and pressure requirements of the MRI system manufacturer and be fully insulated."
   },
   "CRdoor": {
     "title": "Door to the Control Room",
