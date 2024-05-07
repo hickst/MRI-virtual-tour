@@ -55,14 +55,6 @@
     text-align: center;
 }
 
-#close-btn-col {
-    padding: 0px 0px 0px 24px;
-}
-
-#close-btn {
-    margin: 6px 0px 0px 0px;
-}
-
 #the-body-row {
     margin: 10px;
 }
@@ -71,6 +63,9 @@
     margin: 10px 15px 20px 15px;
     padding: 0px;
 }
+
+
+/* Styles for Zoom page modals. */
 
 #close-btn-col-z {
     background-color: white;
@@ -83,9 +78,6 @@
     height: 2em;
     width: 2em;
 }
-
-
-/* Styles for Zoom page modals. */
 
 #zoom-body {
     /* background-color: #bfffff; */

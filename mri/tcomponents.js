@@ -36,10 +36,18 @@ function showInfoPopup (info) {
     };
 
     // await sleepNow(1000);
-    let closeBtn = theIFrame.contentDocument.querySelector("#close-btn");
-    // console.log("closeBtn:", closeBtn);       // for DEBUG
-    if (closeBtn) {
-      closeBtn.addEventListener("click", () => {
+    let leftCloseBtn = theIFrame.contentDocument.querySelector("#l-close-btn");
+    // console.log("leftCloseBtn:", leftCloseBtn); // for DEBUG
+    if (leftCloseBtn) {
+      leftCloseBtn.addEventListener("click", () => {
+        document.querySelector("#the-iframe").style.display = "none";
+      });
+    };
+
+    let rightCloseBtn = theIFrame.contentDocument.querySelector("#r-close-btn");
+    // console.log("rightCloseBtn:", rightCloseBtn); // for DEBUG
+    if (rightCloseBtn) {
+      rightCloseBtn.addEventListener("click", () => {
         document.querySelector("#the-iframe").style.display = "none";
       });
     };
