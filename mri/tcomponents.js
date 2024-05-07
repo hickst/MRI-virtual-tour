@@ -78,11 +78,29 @@ AFRAME.registerComponent('plane-bright', {
   events: {
     mouseenter: function (ev) {
       this.el.setAttribute("material", "opacity", "0.5");
-      console.log("Enter EL:", this.el);   // for DEBUG
+      // console.log("Enter EL:", this.el);   // for DEBUG
     },
     mouseleave: function (ev) {
       this.el.setAttribute("material", "opacity", "0.2");
-      console.log("Leave EL:", this.el);   // for DEBUG
+      // console.log("Leave EL:", this.el);   // for DEBUG
+    },
+  }
+});
+
+
+// Custom Component Modifier: brighten a plane component on mouse enter, dim on mouse leave.
+AFRAME.registerComponent('plane-warn', {
+  events: {
+    mouseenter: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.5");
+      var info = tourInfo["metalWarning"];
+      showInfoPopup(info);
+      // console.log("Enter EL:", this.el);   // for DEBUG
+    },
+    mouseleave: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.2");
+      document.querySelector("#the-iframe").style.display = "none";
+      // console.log("Leave EL:", this.el);   // for DEBUG
     },
   }
 });

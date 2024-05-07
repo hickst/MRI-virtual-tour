@@ -1,13 +1,18 @@
 var tourInfo = {
+  "metalWarning": {
+    "title": "Danger! No Metal Allowed!",
+    "image": "../images/cr_copper_door.jpg",
+    "body": '<p class="danger"><b>ALL metal MUST be removed before entering the scanner room.</b><br/>This includes common items like belts, keys, watches, glasses, wallets, pens, hairclips, and jewelry. Also remove any magnetic materials (e.g., credit and ID cards, USB keys) from your person.</p>'
+  },
   "scanDoor": {
     "title": "Scanner Room Door",
     "image": "../images/cr_copper_door.jpg",
-    "body": "One enters and exits the Scanner room through this door. The door is sheathed in copper and must be closed while the scanner is in operation to prevent radio signals from interfering with the scanner."
+    "body": 'One enters and exits the Scanner room through this door. The door is sheathed in copper and must be closed while the scanner is in operation to prevent radio signals from interfering with the scanner.<br/><br/><p class="danger"><b>ALL metal MUST be removed before entering the scanner room.</b><br/>This includes common items like belts, keys, watches, glasses, wallets, pens, hairclips, and jewelry. Also remove any magnetic materials (e.g., credit and ID cards, USB keys) from your person.</p>'
   },
   "changeRooms": {
     "title": "Changing Rooms",
     "image": "../images/cr_changing_rooms.jpg",
-    "body": "There are two changing rooms available for participants to secure their belongings. All metal or magnetic items (e.g., belts, keys, sunglasses, wallets, watches, jewelry) must be left in a locker. The special locker key <b>IS</b> MRI safe and can be taken into the scanner room."
+    "body": "There are two changing rooms available for participants to secure their belongings. All metal or magnetic items (e.g., belts, keys, watches, glasses, wallets, jewelry) must be left in a locker. The special locker key <b>IS</b> MRI safe and can be taken into the scanner room."
   },
   "blankets": {
     "title": "Blanket Warmer",

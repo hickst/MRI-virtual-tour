@@ -33,15 +33,21 @@
 
     <!-- Navigation circles: click to jump to another scene. -->
     <a-plane id="consolePlane" link="href: console_zoom.html" plane-bright
-             color="red" height="12" width="11.5"
-             material="opacity: 0.2; transparent: true"
+             color="green" height="12" width="11.5"
+             material="opacity: 0.3; transparent: true"
              position="2.8 3.5 -10" rotation="0 0 0">
     </a-plane>
 
     <a-plane id="taskPlane" link="href: task_zoom.html" plane-bright
-             color="green" height="12" width="9.6"
+             color="blue" height="12" width="9.6"
              material="opacity: 0.2; transparent: true"
              position="-7.8 3.5 -10" rotation="0 0 0">
+    </a-plane>
+
+    <a-plane id="doorPlane" plane-warn
+             color="red" height="11.4" width="4.5"
+             material="opacity: 0.2; transparent: true"
+             position="15.2 0.8 -10" rotation="0 -10 -14">
     </a-plane>
 
     <t-navpoint id="to-enter-scanner"

@@ -64,6 +64,10 @@
     padding: 0px;
 }
 
+.danger {
+    color: red;
+}
+
 
 /* Styles for Zoom page modals. */
 
