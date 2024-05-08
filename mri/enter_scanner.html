@@ -3,11 +3,11 @@
 
 <head>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  <script src="/src/components/tcomponents.js"></script>
+  <script src="tcomponents.js"></script>
   <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
-  <script src="/mri/enter_scanner_info.js"></script>
+  <script src="enter_scanner_info.js"></script>
 
-  <link rel="stylesheet" href="/src/components/tour.css" />
+  <link rel="stylesheet" href="../tour.css" />
 </head>
 
 <body>
@@ -18,8 +18,8 @@
 
     <!-- Asset management -->
     <a-assets>
-      <img id="enter-scanner" src="/mri/enter_scanner.jpg" />
-      <img id="arrow" src="/src/assets/arrow.png" />
+      <img id="enter-scanner" src="../images/enter_scanner.jpg" />
+      <img id="arrow" src="../images/arrow.png" />
     </a-assets>
 
     <!-- Entity which wraps the camera -->
@@ -32,17 +32,17 @@
 
     <!-- Navigation circles: click to jump to another scene. -->
     <t-navpoint id="to-patch-panel"
-                link="href: /mri/patch_panel.html"
+                link="href: patch_panel.html"
                 position="0 -10 -17" rotation="90 -110 0">
     </t-navpoint>
 
     <t-navpoint id="to-back2"
-                link="href: /mri/scanner_back2.html"
+                link="href: scanner_back2.html"
                 position="14 -8 -17" rotation="-80 -40 0" scale=".8 .8 .8">
     </t-navpoint>
 
     <t-navpoint id="to-console"
-                link="href: /mri/console.html"
+                link="href: console.html"
                 position="14 -10 -17" rotation="100 -35 0" scale=".9 .9 .9">
     </t-navpoint>
 
@@ -74,7 +74,7 @@
 
   <!-- The information popup iframe, used by all infopoints. -->
   <iframe id="the-iframe" name="the-iframe" class="iframeLeft"
-          src="/src/info_popup.html" style="display:none" />
+          src="info_popup.html" style="display:none" />
 
 </body>
 </html>

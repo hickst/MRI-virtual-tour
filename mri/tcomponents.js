@@ -1,5 +1,6 @@
 // const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
 
+// Creates a modal iFrame which pops up to show the given information.
 function showInfoPopup (info) {
   let theIFrame = document.querySelector("#the-iframe");
   // console.log("theIFrame:", theIFrame);     // for DEBUG
@@ -36,10 +37,18 @@ function showInfoPopup (info) {
     };
 
     // await sleepNow(1000);
-    let closeBtn = theIFrame.contentDocument.querySelector("#close-btn");
-    // console.log("closeBtn:", closeBtn);       // for DEBUG
-    if (closeBtn) {
-      closeBtn.addEventListener("click", () => {
+    let leftCloseBtn = theIFrame.contentDocument.querySelector("#l-close-btn");
+    // console.log("leftCloseBtn:", leftCloseBtn); // for DEBUG
+    if (leftCloseBtn) {
+      leftCloseBtn.addEventListener("click", () => {
+        document.querySelector("#the-iframe").style.display = "none";
+      });
+    };
+
+    let rightCloseBtn = theIFrame.contentDocument.querySelector("#r-close-btn");
+    // console.log("rightCloseBtn:", rightCloseBtn); // for DEBUG
+    if (rightCloseBtn) {
+      rightCloseBtn.addEventListener("click", () => {
         document.querySelector("#the-iframe").style.display = "none";
       });
     };
@@ -49,8 +58,42 @@ function showInfoPopup (info) {
 };
 
 
+// Creates a modal iFrame which pops up to show the given warning information.
+function showWarnPopup (info) {
+  let warnFrame = document.querySelector("#warn-iframe");
+
+  if (warnFrame.style.display == "block") {
+    warnFrame.style.display = "none";
+  } else {
+    let wTitle = warnFrame.contentDocument.querySelector("#warn-title");
+    if (info.title === undefined) {
+      wTitle.innerText = "No title found in the '_info.js' data file";
+    } else {
+      wTitle.innerText = info.title;
+    };
+
+    let wImage = warnFrame.contentDocument.querySelector("#warn-image");
+    if (info.image) {
+      wImage.setAttribute("src", info.image);
+      wImage.style.visibility = null;
+    } else {
+      wImage.style.visibility = "hidden";
+    };
+
+    let wBody = warnFrame.contentDocument.querySelector("#warn-body");
+    if (info.body === undefined) {
+      wBody.innerHTML = "No body info found in the '_info.js' data file";
+    } else {
+      wBody.innerHTML = info.body;
+    };
+
+    warnFrame.style.display = "block";
+  };
+};
+
+
 // Listen for cursor clicks, modify colors of clicked 3D model object, and report
-// click event details to the browser console.
+// click event details to the browser console. NB: for testing only, not used in tour.
 AFRAME.registerComponent('click-listener', {
   init: function () {
     var lastIndex = -1;
@@ -61,6 +104,39 @@ AFRAME.registerComponent('click-listener', {
       console.log('Click event intersection: ', evt.detail.intersection);
       console.log('MouseClick event detail: ', evt.detail.mouseEvent);
     });
+  }
+});
+
+
+// Custom Component Modifier: brighten a plane component on mouse enter, dim on mouse leave.
+AFRAME.registerComponent('plane-bright', {
+  events: {
+    mouseenter: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.5");
+      // console.log("Enter EL:", this.el);   // for DEBUG
+    },
+    mouseleave: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.2");
+      // console.log("Leave EL:", this.el);   // for DEBUG
+    },
+  }
+});
+
+
+// Custom Component Modifier: brighten a plane component on mouse enter, dim on mouse leave.
+AFRAME.registerComponent('plane-warn', {
+  events: {
+    mouseenter: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.5");
+      var info = tourInfo["metalWarning"];
+      showWarnPopup(info);
+      // console.log("Enter EL:", this.el);   // for DEBUG
+    },
+    mouseleave: function (ev) {
+      this.el.setAttribute("material", "opacity", "0.2");
+      document.querySelector("#warn-iframe").style.display = "none";
+      // console.log("Leave EL:", this.el);   // for DEBUG
+    },
   }
 });
 

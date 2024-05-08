@@ -3,11 +3,11 @@
 
 <head>
   <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-  <script src="/src/components/tcomponents.js"></script>
+  <script src="tcomponents.js"></script>
   <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
-  <script src="/mri/console_info.js"></script>
+  <script src="console_info.js"></script>
 
-  <link rel="stylesheet" href="/src/components/tour.css" />
+  <link rel="stylesheet" href="../tour.css" />
 </head>
 
 <body>
@@ -19,8 +19,8 @@
 
     <!-- Asset management -->
     <a-assets>
-      <img id="console" src="/mri/console.jpg" />
-      <img id="arrow" src="/src/assets/arrow.png" />
+      <img id="console" src="../images/console.jpg" />
+      <img id="arrow" src="../images/arrow.png" />
     </a-assets>
 
     <!-- Entity which wraps the camera -->
@@ -32,25 +32,34 @@
     <!-- Entities generated using A-Frame templates. -->
 
     <!-- Navigation circles: click to jump to another scene. -->
-    <a-plane id="consolePlane" link="href: /mri/console_zoom.html"
-             color="red" height="12" width="11.5"
-             material="opacity: 0.1; transparent: true"
+    <a-plane id="consolePlane" link="href: console_zoom.html" plane-bright
+             color="green" height="12" width="11.5"
+             material="opacity: 0.3; transparent: true"
              position="2.8 3.5 -10" rotation="0 0 0">
     </a-plane>
 
-    <a-plane id="taskPlane" link="href: /mri/task_zoom.html"
-             color="green" height="12" width="9.6"
+    <a-plane id="taskPlane" link="href: task_zoom.html" plane-bright
+             color="blue" height="12" width="9.6"
              material="opacity: 0.2; transparent: true"
              position="-7.8 3.5 -10" rotation="0 0 0">
     </a-plane>
 
+    <a-plane id="doorPlane" plane-warn
+             color="red" height="11.4" width="4.5"
+             material="opacity: 0.2; transparent: true"
+             position="15.2 0.8 -10" rotation="0 -10 -14">
+    </a-plane>
+
     <t-navpoint id="to-enter-scanner"
-                link="href: /mri/enter_scanner.html"
+                link="href: enter_scanner.html"
                 position="22 -10 -17" rotation="90 180 0">
     </t-navpoint>
 
     <!-- Information spheres: show info for real-world items in 360 image.-->
     <t-infopoint id="scanDoor" infoKey="scanDoor" position="17 1 -7">
+    </t-infopoint>
+
+    <t-infopoint id="changeRooms" infoKey="changeRooms" radius="0.25" position="20 0 0">
     </t-infopoint>
 
     <t-infopoint id="blankets" infoKey="blankets" position="24 -7 10.2">
@@ -71,7 +80,11 @@
 
   <!-- The information popup iframe, used by all infopoints. -->
   <iframe id="the-iframe" name="the-iframe" class="iframeLeft"
-          src="/src/info_popup.html" style="display:none" />
+          src="info_popup.html" style="display:none"></iframe>
+
+  <!-- Special popup iframe, used by warning popups only. -->
+  <iframe id="warn-iframe" name="warn-iframe" class="warnFrameLeft"
+          src="warn_popup.html" style="display:none"></iframe>
 
 </body>
 </html>
