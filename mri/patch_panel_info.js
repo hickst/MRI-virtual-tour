@@ -27,7 +27,7 @@ var tourInfo = {
   "epoButton": {
     "title": "Emergency Power-Off Button",
     "image": "../images/pp_epo_button.jpg",
-    "body": "Emergency power off button.",
+    "body": "This alternate Emergency Power-Off button can stop the power to the MR scanner without quenching the magnet (i.e., it does NOT vent the helium).",
   },
   "ergometerPower": {
     "title": "Ergometer Power Supply and Settings",
