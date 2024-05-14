@@ -11,8 +11,8 @@ var tourInfo = {
   },
   "changeRooms": {
     "title": "Changing Rooms",
-    "image": "../images/cr_changing_rooms.jpg",
-    "body": "There are two changing rooms available for participants to secure their belongings. All metal or magnetic items (e.g., belts, keys, watches, glasses, wallets, jewelry) must be left in a locker. The special locker key <b>IS</b> MRI safe and can be taken into the scanner room."
+    "image": "../images/cr_changing_room.jpg",
+    "body": "There are two changing rooms available for participants to secure their belongings. All metal or magnetic items (e.g., belts, keys, watches, glasses, wallets, jewelry) must be left in a locker. The special locker keys <b>ARE</b> MRI safe and can be taken into the scanner room."
   },
   "blankets": {
     "title": "Blanket Warmer",
