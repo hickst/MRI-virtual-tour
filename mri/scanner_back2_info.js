@@ -9,7 +9,7 @@ var tourInfo = {
     "body": "This large square shaft rising to the ceiling can safely vent large amounts of super-cold helium to the roof of the building during a catastrophic emergency. A vent shaft must meet the diameter and pressure requirements of the MRI system manufacturer and be fully insulated."
   },
   "CRdoor": {
-    "title": "Door to the Control Room",
+    "title": "Door to the Console Room",
     "image": "../images/cr_copper_door.jpg",
     "body": "One enters and exits the Scanner room through this door, leading to the Console room. The door is sheathed in copper and must be closed while the scanner is in operation to prevent radio signals from interfering with the scanner."
   },

@@ -15,7 +15,7 @@ var tourInfo = {
     "body": "This gurney can be used to remove a participant from the Scanner room in case of an emergency. For example, if a participant had a heart attack you would want to remove them from the Scanner room so that EMTs would not have to work around the strong magnetic field."
   },
   "controlWindow": {
-    "title": "Control Room Window",
+    "title": "Console Room Window",
     "body": "The Console room window allows the MRI technician to monitor activities in the Scanner room while sitting at the operater's console. The window contains an embedded metal mesh to block stray radio signals into and out of the Scanner room. The patch panel, directly below the window, allows cables to be connected from the Console room to the Scanner room while blocking unwanted radio frequencies."
   },
 };
