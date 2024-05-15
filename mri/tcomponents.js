@@ -1,63 +1,3 @@
-// const sleepNow = (delay) => new Promise((resolve) => setTimeout(resolve, delay))
-
-// Creates a modal iFrame which pops up to show the given information.
-function showInfoPopup (info) {
-  let theIFrame = document.querySelector("#the-iframe");
-  // console.log("theIFrame:", theIFrame);     // for DEBUG
-
-  if (theIFrame.style.display == "block") {
-    theIFrame.style.display = "none";
-  } else {
-    let theTitle = theIFrame.contentDocument.querySelector("#the-title");
-    // console.log("theTitle:", theTitle);       // for DEBUG
-    // console.log("info.title:", info.title);   // for DEBUG
-    if (info.title === undefined) {
-      theTitle.innerText = "No title found in the '_info.js' data file";
-    } else {
-      theTitle.innerText = info.title;
-    };
-
-    let theImage = theIFrame.contentDocument.querySelector("#the-image");
-    // console.log("theImage:", theImage);       // for DEBUG
-    // console.log("info.image:", info.image);   // for DEBUG
-    if (info.image) {
-      theImage.setAttribute("src", info.image);
-      theImage.style.visibility = null;
-    } else {
-      theImage.style.visibility = "hidden";
-    };
-
-    let theBody = theIFrame.contentDocument.querySelector("#the-body");
-    // console.log("theBody:", theBody);         // for DEBUG
-    // console.log("info.body:", info.body);     // for DEBUG
-    if (info.body === undefined) {
-      theBody.innerHTML = "No body info found in the '_info.js' data file";
-    } else {
-      theBody.innerHTML = info.body;
-    };
-
-    // await sleepNow(1000);
-    let leftCloseBtn = theIFrame.contentDocument.querySelector("#l-close-btn");
-    // console.log("leftCloseBtn:", leftCloseBtn); // for DEBUG
-    if (leftCloseBtn) {
-      leftCloseBtn.addEventListener("click", () => {
-        document.querySelector("#the-iframe").style.display = "none";
-      });
-    };
-
-    let rightCloseBtn = theIFrame.contentDocument.querySelector("#r-close-btn");
-    // console.log("rightCloseBtn:", rightCloseBtn); // for DEBUG
-    if (rightCloseBtn) {
-      rightCloseBtn.addEventListener("click", () => {
-        document.querySelector("#the-iframe").style.display = "none";
-      });
-    };
-
-    theIFrame.style.display = "block";
-  };
-};
-
-
 // Creates a modal iFrame which pops up to show the given warning information.
 function showWarnPopup (info) {
   let warnFrame = document.querySelector("#warn-iframe");
@@ -147,7 +87,6 @@ AFRAME.registerComponent("infopoint", {
   schema: {
     color: { type: "string", default: "blue" },
     radius: { type: "string", default: ".4" },
-    infoKey: { type: "string", default: "" },
   },
 
   init: function () {
@@ -162,20 +101,9 @@ AFRAME.registerComponent("infopoint", {
       this.data.color = this.el.getAttribute("material").color;
       this.el.setAttribute("material", "color", "#5ef7ff");
       // console.log("tourInfo:", tourInfo);   // for DEBUG
-      // console.log("infoKey:", this.data.infoKey);   // for DEBUG
     },
     mouseleave: function (ev) {
       this.el.setAttribute("material", "color", this.data.color);
-    },
-    click: function (ev) {
-      var hasKey = this.data.infoKey in tourInfo;
-      if (hasKey) {
-        var info = tourInfo[this.data.infoKey];
-        // console.log(info);                  // for DEBUG
-        showInfoPopup(info);
-      } else {
-        console.log("WARNING: No info data found for key:", this.data.infoKey);
-      };
     },
   },
 });
@@ -188,10 +116,8 @@ AFRAME.registerPrimitive("t-infopoint", {
   mappings: {
     color: "infopoint.color",
     radius: "infopoint.radius",
-    infokey: "infopoint.infoKey",
   }
 });
-
 
 
 // Custom Component to navigate to another scene in another HTML page.

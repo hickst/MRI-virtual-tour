@@ -7,6 +7,10 @@
   <!-- Infopoint information is contained in a global JS variable 'tourInfo'. -->
   <script src="scanner_back2_info.js"></script>
 
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+        crossorigin="anonymous" />
   <link rel="stylesheet" href="../tour.css"></script>
 </head>
 
@@ -41,13 +45,16 @@
     </t-navpoint>
 
     <!-- Information spheres: show info for real-world items in 360 image.-->
-    <t-infopoint id="eyetracker" infoKey="eyetracker" position="2.5 4 -17">
+    <t-infopoint id="eyetracker" position="2.5 4 -17"
+                 data-bs-toggle="modal" data-bs-target="#eyeTrackerModal">
     </t-infopoint>
 
-    <t-infopoint id="quenchVent" infoKey="quenchVent" position="2.5 12 -17">
+    <t-infopoint id="quenchVent" position="2.5 12 -17"
+                 data-bs-toggle="modal" data-bs-target="#qventModal">
     </t-infopoint>
 
-    <t-infopoint id="CRdoor" infoKey="CRdoor" position="-13 5 -17" radius=".3">
+    <t-infopoint id="CRdoor" position="-13 5 -17" radius=".3"
+                 data-bs-toggle="modal" data-bs-target="#doorModal">
     </t-infopoint>
 
 
@@ -57,9 +64,71 @@
 
   </a-scene>
 
-  <!-- The information popup iframe, used by all infopoints. -->
-  <iframe id="the-iframe" name="the-iframe" class="iframeRight"
-          src="info_popup.html" style="display:none" />
+
+  <!-- Modals to popup in response to an infosphere. -->
+  <div id="eyeTrackerModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Eyetracker Camera</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          A black eyetracking camera is perched on top of the display trolley.
+          It features an illuminator (left) and the camera (right). The eyetracker
+          works in conjunction with an eye-tracking computer in the Console room and
+          transfers data over a fiber optic cable. Correct placement in the scanner
+          bore is important to buffer the device from scanner vibrations.<br/><br/>
+
+          Model Name: Eyelink 1000 by SR Research
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="../images/sb2_eyetracker.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="qventModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">MRI Scanner Vent (aka Quench Vent)</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          This large square shaft rising to the ceiling can safely vent
+          large amounts of super-cold helium to the roof of the building during
+          a catastrophic emergency. A vent shaft must meet the diameter and
+          pressure requirements of the MRI system manufacturer and be fully insulated.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="doorModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Door to the Console Room</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          One enters and exits the Scanner room through this door, leading to the
+          Console room. The door is sheathed in copper and must be closed while the
+          scanner is in operation to prevent radio signals from interfering with the scanner.
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="../images/cr_copper_door.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous">
+  </script>
 
 </body>
 </html>
