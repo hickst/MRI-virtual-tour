@@ -165,7 +165,7 @@
 }
 
 .btn-row {
-    margin: 15px 0px 10px 10px;
+    margin: 15px 0px 10px 4px;
 }
 
 .btn-custom-violet {
@@ -178,7 +178,7 @@
 }
 
 .info-btn {
-    margin: 0px 5px 0px 0px;
+    margin: 0px 3px 0px 0px;
     padding: 6px 8px;
     --bs-btn-focus-shadow-rgb: 255, 255, 255;
 }

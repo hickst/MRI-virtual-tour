@@ -38,8 +38,8 @@
                 class="btn btn-info info-btn">Speaker</button>
 
         <button type="button"
-                data-bs-toggle="modal" data-bs-target="#btnBoxModal"
-                class="btn btn-custom-violet info-btn">Button Box</button>
+                data-bs-toggle="modal" data-bs-target="#btnBoxInterModal"
+                class="btn btn-custom-violet info-btn">Button Boxes</button>
 
         <button type="button"
                 data-bs-toggle="modal" data-bs-target="#micModal"
@@ -81,22 +81,25 @@
         </div>
         <div class="modal-body">
           The ROLLS MA251 (top) is an amplifier & mixer which mixes audio signals
-          from three channels and outputs the audio to headphones worn by the
-          participant in the scanner. An additional channel (CH 1 - MIC) can collect
-          audio responses FROM the participant for recording using a special
-          noise-reducing microphone in the scanner.<br/>
+          from three channels and outputs the audio to special (Sensimetric) headphones
+          worn by the participant in the scanner. An additional channel (CH 1: MIC)
+          can relay audio responses FROM the participant (for recording) using the
+          noise-reducing fMRI microphone in the scanner.<br/>
 
           <ul>
             <li>CH 4: Music from an auxiliary audio plug (e.g. music from a phone).</li>
             <li>CH 3: Alternate stimulus, from an optional laptop.</li>
             <li>CH 2: Stimulus from the Task PC's sound card.</li>
-            <li>CH 1: Patient audio FROM the special Optoacoustics microphone.</li>
+            <li>CH 1: Participant audio FROM the special Optoacoustics microphone.</li>
           </ul>
 
           Model Name: Rolls MA251 Mixer/Amplifier<br/><br/>
 
-          The ATEN switch (bottom) selects video from either the Task PC or a laptop.
-          Here the green light is on for the right input (the laptop).<br/><br/>
+          The ATEN switch (bottom) sends video to the BOLDscreen display (behind
+          the scanner) from either the Task PC or a researcher laptop. It also
+          connects participant button boxes to either the Task PC or the
+          researcher laptop, via a USB connection.
+          Here the green light is on for the laptop input.<br/><br/>
 
           Model Name: ATEN KVMP Switch CS1762a
         </div>
@@ -115,12 +118,40 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          The J-S speaker allows researchers to hear something.
-          Turn it up to hear the participant, or to ensure that auditory tasks are playing.
-          Turn it down when the scanner is running (the scanner is very loud).
+          The J-S audio monitor allows researchers to monitor the audio mix
+          (from the Rolls mixer) which is sent to headphones worn by the scan
+          participant. If the fMRI microphone is used in the scanner, it is
+          included in the audio mix and researchers are able to hear the
+          participant speaking.<br/><br/>
+
+          The audio mix can be heard on the weird, egg-shaped speaker on the top shelf.
+          Turn it up to listen to the audio tasks that are playing or to hear the participant.
+          Turn it down when the scanner is running (as the scanner is very loud).
         </div>
         <div class="mod-image-div">
           <img class="mod-image" src="../images/tsk_speaker.jpg"></img>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="btnBoxInterModal" class="modal modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h3 class="modal-title w-100">Button Box Interface</h3>
+          <button class="btn btn-success modal-switch-btn text-nowrap"
+                  data-bs-target="#btnBoxModal" data-bs-toggle="modal">Button Box</button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          The button box interface connects to the Task PC (or a laptop) via USB,
+          and to a button box in the scanner via fiber optic cables that run through the
+          patch panel. Participant responses are collected through the button boxes.<br/><br/>
+          Model Name: Current Designs 932 Interface & Power Supply
+        </div>
+        <div class="mod-image-div">
+          <img class="mod-image" src="../images/tsk_button_box.jpg"></img>
         </div>
       </div>
     </div>
@@ -130,18 +161,20 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header text-center">
-          <h3 class="modal-title w-100">Button Box Interface</h3>
+          <h3 class="modal-title w-100">A Button Box</h3>
+          <button class="btn btn-success modal-switch-btn"
+                  data-bs-target="#btnBoxInterModal" data-bs-toggle="modal">Interface</button>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          The button box interface connects to the Task PC via USB, and to a group
-          of button boxes at the MRI via fiber optic cables which run through the
-          patch panel. Participant responses may be collected through the button boxes.<br/><br/>
-          Model Name: Current Designs 932 Interface & Power Supply
-          (interfaces to the Current Designs Button Box Package 904 in the scanner room).
+          Participants' responses are collected with button boxes. The boxes use delicate
+          fiber optic cables which connect to the interface box at the task workstation.
+          Each button sends a different digit to the interface box.
+          <br/><br/>
+          Model Name: one button box from Current Designs Button Box Package 904
         </div>
         <div class="mod-image-div">
-          <img class="mod-image" src="../images/tsk_button_box.jpg"></img>
+          <img class="mod-image" src="../images/tsk_a_button_box.jpg"></img>
         </div>
       </div>
     </div>

@@ -32,7 +32,7 @@ var tourInfo = {
   "ergometerPower": {
     "title": "Ergometer Power Supply and Settings",
     "image": "../images/pp_ergometer_power.jpg",
-      "body": "The power supply (white box) and settings control box (black) for the ergometer.",
+    "body": "The power supply (white box) and settings control box (black) for the ergometer, which is stored on the other side of the room.",
   },
   "phantoms": {
     "title": "Phantoms",
