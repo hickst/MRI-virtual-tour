@@ -17,12 +17,12 @@ var tourInfo = {
   "patchpanel": {
     "title": "Patch Panel",
     "image": "../images/pp_patchpanel.jpg",
-    "body": "The patch panel allows cables to pass from the console room to the scanner room while blocking radio frequencies that would negatively impact scans. Note the scanner room's copper shielding showing around the panel edge and the three copper tubes (top center and bottom left & right) for passing cables through. The copper tubes are carefully designed so that problem radio frequencies are blocked.",
+    "body": "The patch panel allows cables to pass from the Console room to the Scanner room while blocking radio frequencies that would negatively impact scans. Note the Scanner room's copper shielding showing around the panel edge and the three copper tubes (top center and bottom left & right) for passing cables through. The copper tubes are carefully designed so that problem radio frequencies are blocked.",
   },
   "injector": {
     "title": "Fluids Injector",
     "image": "../images/pp_injector.jpg",
-    "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the control room by a dedicated display at the console.<br/><br/>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
+    "body": "The injector device allows precise, controlled injection of saline and contrast agents. Most neuroimaging experiments don't require injections, but it can be useful for some types of experiments. The injector device is controlled from within the Console room by a dedicated display at the console.<br/><br/>Model Name: BRACCO EmpowerMR Contrast Injection System (controlled by the BRACCO Injeneering EmpowerMR Contrast Injection System Display at the console).",
   },
   "epoButton": {
     "title": "Emergency Power-Off Button",
