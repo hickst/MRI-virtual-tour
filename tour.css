@@ -21,7 +21,7 @@
 }
 
 
-/* Styles for warning popout iframes. */
+/* Styles for warning popout iframe. */
 
 .warnFrameLeft {
     position: absolute;
@@ -148,6 +148,7 @@
 
 .modal-content {
     --bs-modal-bg: #bfffff;
+    box-sizing: content-box;
 }
 
 .modal-header {
