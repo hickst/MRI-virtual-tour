@@ -85,6 +85,10 @@
     color: red;
 }
 
+.heavy {
+    font-weight: bold;
+}
+
 #warn_popup {
     background-color: #ffe7e7;
 }
