@@ -21,55 +21,6 @@
 }
 
 
-/* Styles for popout iframe and its content rows. */
-.iframeLeft {
-    position: absolute;
-    top: 3%;
-    left: 3%;
-    width: 840px;
-    height: 80%;
-    border: black solid 2px;
-}
-
-.iframeRight {
-    position: absolute;
-    top: 3%;
-    left: 50%;
-    width: 840px;
-    height: 80%;
-    border: black solid 2px;
-}
-
-.no-padding {
-    padding: 0 !important;
-}
-
-#info_popup {
-    background-color: #afffff;
-}
-
-#the-popout {
-    height: 100%;
-    width: 100%;
-    padding: 0px;
-}
-
-#the-title-row {
-    margin: 0px;
-    padding: 20px 0px 10px 0px;
-    text-align: center;
-}
-
-#the-body-row {
-    margin: 10px;
-}
-
-#the-image-row {
-    margin: 10px 15px 20px 15px;
-    padding: 0px;
-}
-
-
 /* Styles for warning popout iframes. */
 
 .warnFrameLeft {
@@ -87,6 +38,10 @@
 
 .heavy {
     font-weight: bold;
+}
+
+.no-padding {
+    padding: 0 !important;
 }
 
 #warn_popup {
