@@ -23,11 +23,18 @@
     <a-assets>
       <img id="console" src="../images/console.jpg" />
       <img id="arrow" src="../images/arrow.png" />
+      <img id="home" src="../images/home.png" />
     </a-assets>
 
     <!-- Entity which wraps the camera -->
     <a-entity id="maincam" position="0 0 0">
-      <a-camera></a-camera>
+      <a-camera>
+        <!-- Navigation icon: click to return to home page. -->
+        <t-navpoint id="go-home" icon="#home" radius="0.35"
+                    link="href: ../index.html"
+                    position="-11.5 7 -9">
+        </t-navpoint>
+      </a-camera>
     </a-entity>
 
 

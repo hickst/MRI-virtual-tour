@@ -89,15 +89,15 @@ AFRAME.registerPrimitive("t-infopoint", {
 AFRAME.registerComponent("navpoint", {
   schema: {
     color: { type: "string", default: "white" },
+    icon: { type: "string", default: "#arrow" },
+    radius: { type: "string", default: "1.0" },
   },
 
   init: function () {
     this.el.setAttribute("geometry", "primitive", "circle");
-    this.el.setAttribute("material", {
-      shader: "flat",
-      side: "double",
-      src: "#arrow"
-    });
+    this.el.setAttribute("material", {shader: "flat", side: "double"});
+    this.el.setAttribute("geometry", "radius", this.data.radius);
+    this.el.setAttribute("material", "src", this.data.icon);
     this.el.setAttribute("material", "color", this.data.color);
   },
 
@@ -119,5 +119,7 @@ AFRAME.registerPrimitive("t-navpoint", {
   },
   mappings: {
     color: "navpoint.color",
+    icon: "navpoint.icon",
+    radius: "navpoint.radius",
   }
 });
